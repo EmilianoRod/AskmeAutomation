@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="0" failed="4" skipped="4">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-10-02T15:04:52 UYT" name="TestSuite" finished-at="2020-10-02T15:05:17 UYT" duration-ms="24929">
+    <groups>
+    </groups>
+    <test started-at="2020-10-02T15:04:52 UYT" name="TestProject" finished-at="2020-10-02T15:05:17 UYT" duration-ms="24929">
+      <class name="org.example.LoginPageTestCases">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:04:52 UYT" name="initialize" finished-at="2020-10-02T15:05:02 UYT" duration-ms="9409" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:04:52 UYT" name="initialize" finished-at="2020-10-02T15:05:01 UYT" duration-ms="8721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:04:52 UYT" name="initialize" finished-at="2020-10-02T15:05:01 UYT" duration-ms="9055" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginWithoutEmailAndPassword()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:01 UYT" name="loginWithoutEmailAndPassword" finished-at="2020-10-02T15:05:02 UYT" duration-ms="764" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:85)
+at org.example.LoginPageTestCases.loginWithoutEmailAndPassword(LoginPageTestCases.java:60)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithoutEmailAndPassword -->
+        <test-method signature="loginWithInvalidEmail(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:01 UYT" name="loginWithInvalidEmail" data-provider="getDataInvalidEmail" finished-at="2020-10-02T15:05:03 UYT" duration-ms="1222" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[erodriguez@@effectussoftware.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:316)
+at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:115)
+at pageObjects.LoginPage.LogIn(LoginPage.java:60)
+at org.example.LoginPageTestCases.loginWithInvalidEmail(LoginPageTestCases.java:42)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmail -->
+        <test-method signature="loginWithInvalidPassword()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:02 UYT" name="loginWithInvalidPassword" finished-at="2020-10-02T15:05:03 UYT" duration-ms="868" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[invalid session id
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a
+*** Element info: {Using=xpath, value=//input[@name='email']}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60325}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 23eb9ed6ff8fd1a8eeed6e8905cf0a0a
+*** Element info: {Using=xpath, value=//input[@name='email']}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+at pageObjects.LoginPage.getEmailInput(LoginPage.java:29)
+at pageObjects.LoginPage.LogIn(LoginPage.java:60)
+at org.example.LoginPageTestCases.loginWithInvalidPassword(LoginPageTestCases.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidPassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:03 UYT" name="teardown" finished-at="2020-10-02T15:05:03 UYT" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:03 UYT" name="initialize" finished-at="2020-10-02T15:05:05 UYT" duration-ms="2631" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:03 UYT" name="teardown" finished-at="2020-10-02T15:05:03 UYT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:03 UYT" name="teardown" finished-at="2020-10-02T15:05:03 UYT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:03 UYT" name="initialize" finished-at="2020-10-02T15:05:13 UYT" duration-ms="10445" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:75)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:163)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:150)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:139)
+at resources.base.initializeDriver(base.java:40)
+at org.example.LoginPageTestCases.initialize(LoginPageTestCases.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 29 more
+Caused by: java.lang.RuntimeException: java.lang.InterruptedException
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:95)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:227)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$0(DriverService.java:193)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.InterruptedException
+at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:88)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="validateLoginFlow(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:05 UYT" name="validateLoginFlow" data-provider="getData" finished-at="2020-10-02T15:05:17 UYT" duration-ms="11469" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[erodriguez@effectussoftware.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[password]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='root']/div/div/label[154545]"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60426}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee9c9748ff0baefdcd093b471a3d30dc
+*** Element info: {Using=xpath, value=//body/div[@id='root']/div/div/label[154545]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='root']/div/div/label[154545]"}
+  (Session info: chrome=85.0.4183.121)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:60426}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: ee9c9748ff0baefdcd093b471a3d30dc
+*** Element info: {Using=xpath, value=//body/div[@id='root']/div/div/label[154545]}
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+at pageObjects.ResultPage.getResultTitle(ResultPage.java:25)
+at org.example.LoginPageTestCases.validateLoginFlow(LoginPageTestCases.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginFlow -->
+        <test-method signature="loginWithInvalidEmail(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="loginWithInvalidEmail" data-provider="getDataInvalidEmail" finished-at="2020-10-02T15:05:13 UYT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:75)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:163)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:150)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:139)
+at resources.base.initializeDriver(base.java:40)
+at org.example.LoginPageTestCases.initialize(LoginPageTestCases.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 29 more
+Caused by: java.lang.RuntimeException: java.lang.InterruptedException
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:95)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:227)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$0(DriverService.java:193)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.InterruptedException
+at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:88)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="teardown" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661913777" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method signature="loginWithInvalidEmail(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="loginWithInvalidEmail" data-provider="getDataInvalidEmail" finished-at="2020-10-02T15:05:13 UYT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:75)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:163)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:150)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:139)
+at resources.base.initializeDriver(base.java:40)
+at org.example.LoginPageTestCases.initialize(LoginPageTestCases.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 29 more
+Caused by: java.lang.RuntimeException: java.lang.InterruptedException
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:95)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:227)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$0(DriverService.java:193)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.InterruptedException
+at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:88)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmail -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="initialize" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661913778" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="teardown" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661913779" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="initialize" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661913780" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginWithInvalidEmail(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="loginWithInvalidEmail" data-provider="getDataInvalidEmail" finished-at="2020-10-02T15:05:13 UYT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:75)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:163)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:150)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:139)
+at resources.base.initializeDriver(base.java:40)
+at org.example.LoginPageTestCases.initialize(LoginPageTestCases.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 29 more
+Caused by: java.lang.RuntimeException: java.lang.InterruptedException
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:95)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:227)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$0(DriverService.java:193)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.InterruptedException
+at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:88)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidEmail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:13 UYT" name="teardown" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661913781" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:17 UYT" name="teardown" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661917823" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="initialize()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:17 UYT" name="initialize" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661917823" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="validateLoginFlow(java.lang.String, java.lang.String)[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:17 UYT" name="validateLoginFlow" data-provider="getData" finished-at="2020-10-02T15:05:17 UYT" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Timed out waiting for driver server to start.
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.6', java.version: '11.0.7'
+Driver info: driver.version: ChromeDriver
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:210)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:216)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:136)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:75)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:163)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:150)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:139)
+at resources.base.initializeDriver(base.java:40)
+at org.example.LoginPageTestCases.initialize(LoginPageTestCases.java:22)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:63)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:348)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:695)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:523)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.util.concurrent.ExecutionException: java.lang.RuntimeException: java.lang.InterruptedException
+at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
+at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2022)
+at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:204)
+... 29 more
+Caused by: java.lang.RuntimeException: java.lang.InterruptedException
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:95)
+at org.openqa.selenium.remote.service.DriverService.waitUntilAvailable(DriverService.java:227)
+at org.openqa.selenium.remote.service.DriverService.lambda$start$0(DriverService.java:193)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)
+at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)
+at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.InterruptedException
+at java.base/java.util.concurrent.FutureTask.awaitDone(FutureTask.java:418)
+at java.base/java.util.concurrent.FutureTask.get(FutureTask.java:203)
+at org.openqa.selenium.net.UrlChecker.waitUntilAvailable(UrlChecker.java:88)
+... 9 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginFlow -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:org.example.LoginPageTestCases@4b672daa]" started-at="2020-10-02T15:05:17 UYT" name="teardown" finished-at="1969-12-31T21:00:00 UYT" duration-ms="-1601661917826" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- org.example.LoginPageTestCases -->
+    </test> <!-- TestProject -->
+  </suite> <!-- TestSuite -->
+</testng-results>
