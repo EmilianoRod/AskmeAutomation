@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="LoginPageTestCases.loginWithoutEmailAndPassword" type="TestNG" nameIsGenerated="true">
+  <configuration default="false" name="LoginPageCases.validateLoginFlow" type="TestNG" nameIsGenerated="true">
     <module name="Askme web Automation" />
     <useClassPathOnly />
     <extension name="coverage">
@@ -10,8 +10,8 @@
     </extension>
     <option name="SUITE_NAME" value="" />
     <option name="PACKAGE_NAME" value="org.example" />
-    <option name="MAIN_CLASS_NAME" value="org.example.LoginPageTestCases" />
-    <option name="METHOD_NAME" value="loginWithoutEmailAndPassword" />
+    <option name="MAIN_CLASS_NAME" value="org.example.LoginPageCases" />
+    <option name="METHOD_NAME" value="validateLoginFlow" />
     <option name="GROUP_NAME" value="" />
     <option name="TEST_OBJECT" value="METHOD" />
     <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />

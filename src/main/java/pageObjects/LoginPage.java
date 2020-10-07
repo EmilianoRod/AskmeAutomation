@@ -5,9 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import resources.base;
+import resources.Base;
 
-public class LoginPage extends base{
+
+public class LoginPage extends Base {
 
     public WebDriver driver;
 
@@ -62,9 +63,9 @@ public class LoginPage extends base{
         getSubmitButton().click();
         try {
             isVisibleInViewport(getResultPageElement());
-            log.info("Sesión iniciada");
+            //log.info("Sesión iniciada");
         } catch(Exception e){
-            log.error("Error al iniciar sesion");
+            //log.error("Error al iniciar sesion");
         }
 
     }
