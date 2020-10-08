@@ -1,4 +1,18 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.564 s - in TestSuite
+Tests run: 26, Failures: 3, Errors: 0, Skipped: 23, Time elapsed: 35.626 s <<< FAILURE! - in TestSuite
+loginWithInvalidEmail(org.example.LoginPageCases)  Time elapsed: 4.329 s  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException
+	at org.example.LoginPageCases.loginWithInvalidEmail(LoginPageCases.java:57)
+
+validateLoginFlow(org.example.LoginPageCases)  Time elapsed: 4.347 s  <<< FAILURE!
+java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.NoSuchElementException
+	at org.example.LoginPageCases.validateLoginFlow(LoginPageCases.java:47)
+
+tearDown(org.example.LoginPageCases)  Time elapsed: 4.347 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+

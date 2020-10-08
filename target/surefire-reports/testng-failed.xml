@@ -9,9 +9,11 @@
       <class name="org.example.LoginPageCases">
         <methods>
           <include name="tearDown"/>
-          <include name="validateLoginFlow" invocation-numbers="0 1"/>
+          <include name="validateLoginFlow" invocation-numbers="0"/>
           <include name="loginWithInvalidPassword"/>
+          <include name="loginWithInvalidEmail" invocation-numbers="0"/>
           <include name="setUp"/>
+          <include name="loginWithoutEmailAndPassword"/>
           <include name="basePageNavigation"/>
         </methods>
       </class> <!-- org.example.LoginPageCases -->

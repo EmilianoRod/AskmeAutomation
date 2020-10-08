@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="48.564" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="35.626" tests="26" errors="0" skipped="23" failures="3">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -64,12 +64,124 @@
     <property name="java.class.version" value="55.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="loginWithoutEmailAndPassword" classname="org.example.LoginPageCases" time="3.712"/>
-  <testcase name="validateLoginFlow" classname="org.example.LoginPageCases" time="0.384"/>
-  <testcase name="validateLoginFlow" classname="org.example.LoginPageCases" time="5.024"/>
-  <testcase name="loginWithInvalidPassword" classname="org.example.LoginPageCases" time="1.097"/>
-  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="3.811"/>
-  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="6.274"/>
-  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="6.216"/>
-  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="6.139"/>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="4.329">
+    <failure message="Could not initialize class org.openqa.selenium.WebDriverException" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException
+	at org.example.LoginPageCases.loginWithInvalidEmail(LoginPageCases.java:57)
+</failure>
+    <system-out><![CDATA[firefox
+firefox
+firefox
+firefox
+**************
+Screenshot stored at: /Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/validateLoginFlow-Thu_Oct_08_16_55_56_UYT_2020.png
+**************
+**************
+Screenshot stored at: /Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Thu_Oct_08_16_55_56_UYT_2020.png
+**************
+]]></system-out>
+    <system-err><![CDATA[1602186935185	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/0m/gb7z83vd0cj1xmtytxxw2tgm0000gn/T/rust_mozprofilemFQBFb"
+1602186935212	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/0m/gb7z83vd0cj1xmtytxxw2tgm0000gn/T/rust_mozprofilegcoN5P"
+1602186947056	Marionette	INFO	Listening on port 54532
+1602186947056	Marionette	INFO	Listening on port 54533
+1602186947109	Marionette	WARN	TLS certificate errors will be ignored for this session
+1602186947112	Marionette	WARN	TLS certificate errors will be ignored for this session
+Oct 08, 2020 4:55:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Oct 08, 2020 4:55:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1602186954774	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/0m/gb7z83vd0cj1xmtytxxw2tgm0000gn/T/rust_mozprofilecc4BJN"
+1602186954971	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "-marionette" "-foreground" "-no-remote" "-profile" "/var/folders/0m/gb7z83vd0cj1xmtytxxw2tgm0000gn/T/rust_mozprofile23U0GC"
+]]></system-err>
+  </testcase>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
+  <testcase name="validateLoginFlow" classname="org.example.LoginPageCases" time="4.347">
+    <failure message="Could not initialize class org.openqa.selenium.NoSuchElementException" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.NoSuchElementException
+	at org.example.LoginPageCases.validateLoginFlow(LoginPageCases.java:47)
+</failure>
+  </testcase>
+  <testcase name="validateLoginFlow" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="4.347">
+    <failure message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection" type="org.testng.TestNGException"><![CDATA[org.testng.TestNGException: 
+
+Can inject only one of <ITestContext, XmlTest, Method, Object[], ITestResult> into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+]]></failure>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setUp" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+    <system-err><![CDATA[1602186966732	Marionette	INFO	Listening on port 54823
+1602186966816	Marionette	WARN	TLS certificate errors will be ignored for this session
+Oct 08, 2020 4:56:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="basePageNavigation" classname="org.example.LoginPageCases" time="0">
+    <skipped/>
+    <system-err><![CDATA[1602186967025	Marionette	INFO	Listening on port 54826
+1602186967121	Marionette	WARN	TLS certificate errors will be ignored for this session
+Oct 08, 2020 4:56:07 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="loginWithoutEmailAndPassword" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
+  <testcase name="loginWithInvalidPassword" classname="org.example.LoginPageCases" time="0">
+    <skipped message="&#10;Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.&#10;For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection"/>
+  </testcase>
 </testsuite>

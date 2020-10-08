@@ -34,7 +34,7 @@ public class LoginPageCases extends Base {
     public void loginWithoutEmailAndPassword() throws InterruptedException {
         LoginPage login = basePageNavigation();
         login.getSubmitButton().click();
-       //log.info("Botón ingresar clickeado");
+        //log.info("Botón ingresar clickeado");
         Thread.sleep(2000);
         Assert.assertTrue(isVisibleInViewport(login.getEmailIsRequired()));
         Assert.assertTrue(isVisibleInViewport(login.getPasswordIsRequired()));

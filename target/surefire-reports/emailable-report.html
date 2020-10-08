@@ -9,17 +9,111 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">TestSuite</th></tr>
-<tr><td><a href="#t0">TestProject</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">47,096</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestProject</a></td><td class="num">0</td><td class="num attn">6</td><td class="num">0</td><td class="num attn">2</td><td class="num">33,472</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestProject &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">org.example.LoginPageCases</td><td><a href="#m0">loginWithInvalidEmail</a></td><td rowspan="4">1602178887427</td><td rowspan="4">6274</td></tr><tr class="passedeven"><td><a href="#m1">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m2">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m3">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m4">loginWithInvalidPassword</a></td><td rowspan="1">1602178871408</td><td rowspan="1">7423</td></tr><tr class="passedeven"><td><a href="#m5">loginWithoutEmailAndPassword</a></td><td rowspan="1">1602178871455</td><td rowspan="1">3696</td></tr><tr class="passedeven"><td><a href="#m6">validateLoginFlow</a></td><td rowspan="2">1602178871486</td><td rowspan="2">6633</td></tr><tr class="passedeven"><td><a href="#m7">validateLoginFlow</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestProject &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">org.example.LoginPageCases</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1602186957328</td><td rowspan="1">-1602186957328</td></tr><tr><th colspan="4">TestProject &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">org.example.LoginPageCases</td><td><a href="#m1">loginWithInvalidEmail</a></td><td rowspan="1">1602186952956</td><td rowspan="1">3763</td></tr><tr class="failedeven"><td><a href="#m2">validateLoginFlow</a></td><td rowspan="1">1602186952980</td><td rowspan="1">3753</td></tr><tr><th colspan="4">TestProject &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="17">org.example.LoginPageCases</td><td><a href="#m3">basePageNavigation</a></td><td rowspan="6">1602186957360</td><td rowspan="6">-1602186957360</td></tr><tr class="skippedeven"><td><a href="#m4">basePageNavigation</a></td></tr><tr class="skippedeven"><td><a href="#m5">basePageNavigation</a></td></tr><tr class="skippedeven"><td><a href="#m6">basePageNavigation</a></td></tr><tr class="skippedeven"><td><a href="#m7">basePageNavigation</a></td></tr><tr class="skippedeven"><td><a href="#m8">basePageNavigation</a></td></tr><tr class="skippedeven"><td><a href="#m9">setUp</a></td><td rowspan="4">1602186957347</td><td rowspan="4">-1602186957347</td></tr><tr class="skippedeven"><td><a href="#m10">setUp</a></td></tr><tr class="skippedeven"><td><a href="#m11">setUp</a></td></tr><tr class="skippedeven"><td><a href="#m12">setUp</a></td></tr><tr class="skippedeven"><td><a href="#m13">tearDown</a></td><td rowspan="7">1602186957358</td><td rowspan="7">-1602186957358</td></tr><tr class="skippedeven"><td><a href="#m14">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m15">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m16">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m17">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m18">tearDown</a></td></tr><tr class="skippedeven"><td><a href="#m19">tearDown</a></td></tr><tr><th colspan="4">TestProject &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="6">org.example.LoginPageCases</td><td><a href="#m20">loginWithInvalidEmail</a></td><td rowspan="3">1602186957342</td><td rowspan="3">0</td></tr><tr class="skippedeven"><td><a href="#m21">loginWithInvalidEmail</a></td></tr><tr class="skippedeven"><td><a href="#m22">loginWithInvalidEmail</a></td></tr><tr class="skippedeven"><td><a href="#m23">loginWithInvalidPassword</a></td><td rowspan="1">1602186967170</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m24">loginWithoutEmailAndPassword</a></td><td rowspan="1">1602186966862</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m25">validateLoginFlow</a></td><td rowspan="1">1602186957361</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>TestProject</h2><h3 id="m0">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware..com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware..c</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez#effectussoftware..com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">org.example.LoginPageCases#loginWithInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">org.example.LoginPageCases#loginWithoutEmailAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez+1@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestProject</h2><h3 id="m0">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@@effectussoftware.com</td><td>password</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.WebDriverException
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at pageObjects.LoginPage.getResultPageElement(LoginPage.java:49)
+	at pageObjects.LoginPage.LogIn(LoginPage.java:65)
+	at org.example.LoginPageCases.loginWithInvalidEmail(LoginPageCases.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware.com</td><td>password</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">java.lang.NoClassDefFoundError: Could not initialize class org.openqa.selenium.NoSuchElementException
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
+	at pageObjects.LoginPage.getResultPageElement(LoginPage.java:49)
+	at pageObjects.LoginPage.LogIn(LoginPage.java:65)
+	at org.example.LoginPageCases.validateLoginFlow(LoginPageCases.java:47)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">org.example.LoginPageCases#basePageNavigation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">org.example.LoginPageCases#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">org.example.LoginPageCases#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">org.example.LoginPageCases#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">org.example.LoginPageCases#setUp</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">org.example.LoginPageCases#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">org.example.LoginPageCases#loginWithInvalidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">org.example.LoginPageCases#loginWithoutEmailAndPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.TestNGException: 
+Can inject only one of &lt;ITestContext, XmlTest, Method, Object[], ITestResult&gt; into a @AfterMethod annotated tearDown.
+For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+... Removed 14 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
