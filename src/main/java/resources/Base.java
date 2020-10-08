@@ -12,6 +12,7 @@ public class Base {
 
     protected static ThreadLocal<ChromeDriver> driver = new ThreadLocal<>();
 
+
     @BeforeMethod
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriver 7");

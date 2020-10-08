@@ -9,35 +9,17 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">TestSuite</th></tr>
-<tr><td><a href="#t0">TestProject</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,168</td><td></td><td></td></tr>
+<tr><td><a href="#t0">TestProject</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">47,096</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestProject &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">org.example.LoginPageTestCases</td><td><a href="#m0">loginWithInvalidPassword</a></td><td rowspan="1">1602111026947</td><td rowspan="1">9731</td></tr><tr><th colspan="4">TestProject &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">org.example.LoginPageTestCases</td><td><a href="#m1">loginWithoutEmailAndPassword</a></td><td rowspan="1">1602111026991</td><td rowspan="1">9215</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">TestProject &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">org.example.LoginPageCases</td><td><a href="#m0">loginWithInvalidEmail</a></td><td rowspan="4">1602178887427</td><td rowspan="4">6274</td></tr><tr class="passedeven"><td><a href="#m1">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m2">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m3">loginWithInvalidEmail</a></td></tr><tr class="passedeven"><td><a href="#m4">loginWithInvalidPassword</a></td><td rowspan="1">1602178871408</td><td rowspan="1">7423</td></tr><tr class="passedeven"><td><a href="#m5">loginWithoutEmailAndPassword</a></td><td rowspan="1">1602178871455</td><td rowspan="1">3696</td></tr><tr class="passedeven"><td><a href="#m6">validateLoginFlow</a></td><td rowspan="2">1602178871486</td><td rowspan="2">6633</td></tr><tr class="passedeven"><td><a href="#m7">validateLoginFlow</a></td></tr></tbody>
 </table>
-<h2>TestProject</h2><h3 id="m0">org.example.LoginPageTestCases#loginWithInvalidPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[contains(text(),&apos;Credenciales invalidas&apos;)]&quot;}
-  (Session info: chrome=85.0.4183.121)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0-alpha-6&apos;, revision: &apos;5f43a29cfc&apos;
-System info: host: &apos;Emilianos-Mini.localdomain&apos;, ip: &apos;192.168.1.37&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.7&apos;, java.version: &apos;11.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:54140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 492bbed23253f6c2add9322fa3afaa66
-*** Element info: {Using=xpath, value=//label[contains(text(),&apos;Credenciales invalidas&apos;)]}
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:394)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)
-	at pageObjects.LoginPage.getErrorTextCredencialesInvalidas(LoginPage.java:46)
-	at org.example.LoginPageTestCases.loginWithInvalidPassword(LoginPageTestCases.java:19)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">org.example.LoginPageTestCases#loginWithoutEmailAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>TestProject</h2><h3 id="m0">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware..com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware..c</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">org.example.LoginPageCases#loginWithInvalidEmail</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez#effectussoftware..com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">org.example.LoginPageCases#loginWithInvalidPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">org.example.LoginPageCases#loginWithoutEmailAndPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">org.example.LoginPageCases#validateLoginFlow</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>erodriguez+1@effectussoftware.com</td><td>password</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

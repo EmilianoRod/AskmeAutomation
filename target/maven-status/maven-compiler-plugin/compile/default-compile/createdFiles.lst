@@ -1,5 +1,5 @@
 pageObjects/ResultPage.class
 pageObjects/LoginPage.class
 org/example/App.class
-resources/BaseTest.class
 resources/ExtentManager.class
+resources/Base.class

@@ -12,7 +12,7 @@ public class ResultPage extends Base {
     public WebDriver driver;
 
     private By logOutButton = By.xpath("//label[contains(text(),'Cerrar sesión')]");
-    private By resultTitle = By.xpath("//body/div[@id='root']/div/div/label[154545]");
+    private By resultTitle = By.xpath("//body/div[@id='root']/div[1]/div[2]/label[1]");
 
 
     public ResultPage(WebDriver driver){

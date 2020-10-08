@@ -52,7 +52,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 7, 2020 07:50:21 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 8, 2020 02:41:03 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -68,7 +68,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -111,10 +110,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -132,68 +131,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidPassword</span>
-						<span class='test-time'>Oct 7, 2020 07:50:26 PM</span>
-						<span class='test-status right fail'>fail</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Oct 7, 2020 07:50:26 PM</span>
-	<span class='label end-time'>Oct 7, 2020 07:50:37 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+46ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:36 PM</td>
-				<td class='step-details'>
-						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br> java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br> java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)<br> org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)<br> org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> pageObjects.LoginPage.getErrorTextCredencialesInvalidas(LoginPage.java:46)<br> org.example.LoginPageCases.loginWithInvalidPassword(LoginPageTestCases.java:19)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br> java.base/java.lang.reflect.Method.invoke(Method.java:566)<br> org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br> org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br> org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br> org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br> org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br> org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br> java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)<br> java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)<br> java.base/java.lang.Thread.run(Thread.java:834)]</details>
-					
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:37 PM</td>
-				<td class='step-details'>
-						<b><font color=red>Screenshot of failure</font></b>
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidPassword-Wed_Oct_07_19_50_36_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidPassword-Wed_Oct_07_19_50_36_UYT_2020.png'>
-				</td>
-			</tr>
-			<tr class='log' status='fail'>
-				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>7:50:37 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text red'><b>Test Method loginWithInvalidPassword Failed</b></span>
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithoutEmailAndPassword</span>
-						<span class='test-time'>Oct 7, 2020 07:50:27 PM</span>
+						<span class='test-time'>Oct 8, 2020 02:41:11 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 7, 2020 07:50:27 PM</span>
-	<span class='label end-time'>Oct 7, 2020 07:50:36 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+195ms</span>
+	<span class='label start-time'>Oct 8, 2020 02:41:11 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+405ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -207,9 +155,254 @@
 		<tbody>
 			<tr class='log' status='pass'>
 				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>7:50:36 PM</td>
+				<td class='timestamp'>2:41:18 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method loginWithInvalidPasswordSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithoutEmailAndPassword</span>
+						<span class='test-time'>Oct 8, 2020 02:41:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:11 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 3s+735ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:15 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text green'><b>Test Method loginWithoutEmailAndPasswordSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: validateLoginFlow</span>
+						<span class='test-time'>Oct 8, 2020 02:41:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:11 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:18 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+634ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:18 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method validateLoginFlowSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Oct 8, 2020 02:41:17 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:17 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+170ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:24 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: validateLoginFlow</span>
+						<span class='test-time'>Oct 8, 2020 02:41:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:21 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+24ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:26 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method validateLoginFlowSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Oct 8, 2020 02:41:27 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:27 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+275ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:33 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Oct 8, 2020 02:41:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:36 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+216ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:42 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Oct 8, 2020 02:41:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Oct 8, 2020 02:41:45 PM</span>
+	<span class='label end-time'>Oct 8, 2020 02:41:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 6s+141ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>2:41:51 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
 					
 				</td>
 			</tr>
@@ -246,7 +439,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>2</div>
+					<div class='panel-lead'>8</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -258,19 +451,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 7, 2020 07:50:21 PM</div>
+					<div class='panel-lead'>Oct 8, 2020 02:41:03 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 7, 2020 07:50:37 PM</div>
+			 		<div class='panel-lead'>Oct 8, 2020 02:41:51 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 15s+569ms</div>
+					<div class='panel-lead'>0h 0m 47s+454ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -301,14 +494,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 2,
-				passParent: 1,
-				failParent: 1,
+                parentCount: 8,
+				passParent: 8,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -333,7 +526,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "org.example.LoginPageCases :: loginWithInvalidPassword":10.046,"org.example.LoginPageCases :: loginWithoutEmailAndPassword":9.195
+			        "org.example.LoginPageCases :: loginWithInvalidPassword":7.405,"org.example.LoginPageCases :: loginWithoutEmailAndPassword":3.735,"org.example.LoginPageCases :: validateLoginFlow":6.634,"org.example.LoginPageCases :: loginWithInvalidEmail":7.17,"org.example.LoginPageCases :: validateLoginFlow":5.024,"org.example.LoginPageCases :: loginWithInvalidEmail":6.275,"org.example.LoginPageCases :: loginWithInvalidEmail":6.216,"org.example.LoginPageCases :: loginWithInvalidEmail":6.141
 			};
 		</script>
 	

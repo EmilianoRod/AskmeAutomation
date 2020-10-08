@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.238 s <<< FAILURE! - in TestSuite
-loginWithInvalidPassword(org.example.LoginPageTestCases)  Time elapsed: 9.984 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//label[contains(text(),'Credenciales invalidas')]"}
-  (Session info: chrome=85.0.4183.121)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
-System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '11.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:54140}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 492bbed23253f6c2add9322fa3afaa66
-*** Element info: {Using=xpath, value=//label[contains(text(),'Credenciales invalidas')]}
-	at org.example.LoginPageTestCases.loginWithInvalidPassword(LoginPageTestCases.java:19)
-
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 48.564 s - in TestSuite
