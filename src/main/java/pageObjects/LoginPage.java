@@ -5,9 +5,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-import resources.base;
+import resources.Base;
 
-public class LoginPage extends base{
+
+public class LoginPage extends Base {
 
     public WebDriver driver;
 
@@ -18,6 +19,7 @@ public class LoginPage extends base{
     private By errorTextCredencialesInvalidas = By.xpath("//label[contains(text(),'Credenciales invalidas')]");
     private By resultsPageElement = By.xpath("//body/div[@id='root']/div/div/label[1]");
     private By emailIsRequired = By.xpath("//body//div[@id='root']//div//div//div//div[1]//label[2]");
+    private By emailIsInvalid = By.xpath("//body/div[@id='root']/div[1]/div[2]/form[1]/div[1]/div[1]/label[2]");
     private By passwordIsRequired = By.xpath("//body/div[@id='root']/div[1]/div[2]/form[1]/div[1]/div[2]/label[2]");
 
 
@@ -51,21 +53,23 @@ public class LoginPage extends base{
 
     public WebElement getPasswordIsRequired(){ return driver.findElement(passwordIsRequired); }
 
+    public WebElement getEmailIsInvalid(){ return driver.findElement(emailIsInvalid); }
 
 
-    public void LogIn(String email, String password){
+
+    public void LogIn(String email, String password) throws InterruptedException {
         Assert.assertTrue(getEmailInput().isDisplayed());
         Assert.assertTrue(getPasswordInput().isDisplayed());
         Assert.assertTrue(getSubmitButton().isDisplayed());
-        getEmailInput().sendKeys(email);
-        getPasswordInput().sendKeys(password);
-        getSubmitButton().click();
         try {
+            getEmailInput().sendKeys(email);
+            getPasswordInput().sendKeys(password);
+            getSubmitButton().click();
+            Thread.sleep(2000);
             isVisibleInViewport(getResultPageElement());
             log.info("Sesión iniciada");
         } catch(Exception e){
             log.error("Error al iniciar sesion");
         }
-
     }
 }
