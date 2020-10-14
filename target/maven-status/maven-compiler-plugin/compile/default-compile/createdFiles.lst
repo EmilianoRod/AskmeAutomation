@@ -2,4 +2,5 @@ pageObjects/ResultPage.class
 pageObjects/LoginPage.class
 org/example/App.class
 resources/ExtentManager.class
+pageObjects/InfoUserPage.class
 resources/Base.class

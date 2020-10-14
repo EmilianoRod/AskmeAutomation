@@ -40,6 +40,8 @@ public class Listeners extends Base implements ITestListener {
         String logText = "<b>Test Method " + result.getMethod().getMethodName() + "Successful</b>";
         Markup m = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         extentTest.get().log(Status.PASS, m);
+        log.info("Test completed");
+
     }
 
     public void onTestFailure(ITestResult result) {
@@ -61,6 +63,7 @@ public class Listeners extends Base implements ITestListener {
         String logText = "<b>Test Method " + methodName + " Failed</b>";
         Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
         extentTest.get().log(Status.FAIL, m);
+        log.info("Test failed");
     }
 
     public void onTestSkipped(ITestResult result) {
@@ -68,6 +71,7 @@ public class Listeners extends Base implements ITestListener {
         String logText = "<b>Test Method " + result.getMethod().getMethodName() + "Skipped</b>";
         Markup m = MarkupHelper.createLabel(logText, ExtentColor.YELLOW);
         extentTest.get().log(Status.SKIP, m);
+        log.info("Test skipped");
     }
 
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
