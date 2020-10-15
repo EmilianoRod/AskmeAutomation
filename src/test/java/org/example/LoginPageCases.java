@@ -18,7 +18,6 @@ public class LoginPageCases extends Base {
 
     Statement st;
 
-    @BeforeMethod
     public LoginPage basePageNavigation() throws SQLException {
         WebDriver driver = getDriver();
         driver.get(prop.getProperty("url"));

@@ -10,15 +10,17 @@ import resources.Base;
 @SuppressWarnings("SpellCheckingInspection")
 public class ResultPage extends Base {
     public WebDriver driver;
+    public ResultPage(WebDriver driver){
+        this.driver = driver;
+    }
+
 
     private By logOutButton = By.xpath("//label[contains(text(),'Cerrar sesión')]");
     private By resultTitle = By.xpath("//body/div[@id='root']/div[1]/div[2]/label[1]");
     private By myEmailButton = By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/label[1]");
 
 
-    public ResultPage(WebDriver driver){
-        this.driver = driver;
-    }
+    public WebElement getLateralMenuButtons(int i){return driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[" + i + "]"));}//i=1..6
     public WebElement getLogOutButton(){
         return driver.findElement(logOutButton);
     }
