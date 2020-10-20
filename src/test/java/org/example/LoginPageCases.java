@@ -33,11 +33,14 @@ public class LoginPageCases extends Base {
     @Test
     public void loginWithInvalidPassword() throws InterruptedException, SQLException {
         LoginPage login = basePageNavigation();
+        Thread.sleep(2000);
         ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
         set.next();
+        Thread.sleep(2000);
         login.LogIn(set.getString(1), "incorrectpassword");
         Thread.sleep(2000);
         Assert.assertTrue(isVisibleInViewport(login.getErrorTextCredencialesInvalidas()));
+        Thread.sleep(2000);
         System.out.println("Test completed");
     }
 
