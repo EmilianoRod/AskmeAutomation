@@ -38,8 +38,12 @@ public class Base{
         String browserName = prop.getProperty("browser"); //comment this line if you are sending parameter from Maven
         System.out.println(browserName);
 
-        if (browserName.contains("chrome")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriver 7");
+        if (browserName.contains("chrome")){
+            if(System.getProperty("os.name").contains("Windows")) {
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriverWindows.exe");
+            } else if(System.getProperty("os.name").contains("Mac")){
+                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriverMac");
+                }
             ChromeOptions options = new ChromeOptions();
             if (browserName.contains("headless")) {
                 options.addArguments("headless");
