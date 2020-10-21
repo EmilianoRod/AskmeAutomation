@@ -2,14 +2,14 @@ package resources;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -19,6 +19,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Base{
 
@@ -101,5 +104,22 @@ public class Base{
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    // Waiting 30 seconds for an element to be present on the page, checking
+    // for its presence once every 5 seconds.
+    Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
+            .withTimeout(30, SECONDS)
+            .pollingEvery(5, SECONDS)
+            .ignoring(NoSuchElementException.class);
+
+    protected Boolean waitForIsClickable(WebElement locator, Integer... timeout) {
+        try {
+            wait(isVisibleInViewport(locator).booleanValue() == true,
+                    (timeout.length > 0 ? timeout[0] : null));
+        } catch (TimeoutException exception) {
+            return false;
+        }
+        return true;
     }
 }
