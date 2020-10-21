@@ -28,14 +28,15 @@ public class AdminsTestCases extends Base {
         Thread.sleep(2000);
         ResultPage resultPage = new ResultPage(getDriver());
         resultPage.getLateralMenuButtons(4).click();
-        Thread.sleep(2000);
         AdminsPage adminPage = new AdminsPage(getDriver());
-        Thread.sleep(2000);
         return adminPage;
     }
 
     @Test
-    public void test() throws SQLException, InterruptedException {
+    public void createCompanyAdmin() throws SQLException, InterruptedException {
         AdminsPage adminsPage = basePageNavigation();
+        adminsPage.getNewAdminButton().click();
+
+
     }
 }
