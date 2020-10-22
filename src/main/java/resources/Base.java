@@ -13,23 +13,25 @@ import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import javax.sound.midi.SysexMessage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
-public class Base{
+public class Base {
 
     public Properties prop;
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static Logger log = LogManager.getLogger(Base.class.getName());
     public Connection connection = null;
-
 
 
     @BeforeMethod
@@ -41,12 +43,12 @@ public class Base{
         String browserName = prop.getProperty("browser"); //comment this line if you are sending parameter from Maven
         System.out.println(browserName);
 
-        if (browserName.contains("chrome")){
-            if(System.getProperty("os.name").contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriverWindows.exe");
-            } else if(System.getProperty("os.name").contains("Mac")){
-                    System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//chromedriverMac");
-                }
+        if (browserName.contains("chrome")) {
+            if (System.getProperty("os.name").contains("Windows")) {
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//chromedriverWindows.exe");
+            } else if (System.getProperty("os.name").contains("Mac")) {
+                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//chromedriverMac");
+            }
             ChromeOptions options = new ChromeOptions();
             if (browserName.contains("headless")) {
                 options.addArguments("headless");
@@ -60,12 +62,12 @@ public class Base{
         }
     }
 
-    public WebDriver getDriver(){
+    public WebDriver getDriver() {
         return driver.get();
     }
 
     @AfterMethod
-    public void tearDown(){
+    public void tearDown() {
         getDriver().quit();
     }
 
@@ -85,20 +87,19 @@ public class Base{
                 , element);
     }
 
-    public void connect(){
-        try{
+    public void connect() {
+        try {
             try {
                 log.info("Connecting to database...");
                 Class.forName("org.postgresql.Driver");
-            }
-            catch (ClassNotFoundException e) {
+            } catch (ClassNotFoundException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-            connection = DriverManager.getConnection(prop.getProperty("dbUrl"),prop.getProperty("username"), prop.getProperty("password"));
-            if(connection != null){
+            connection = DriverManager.getConnection(prop.getProperty("dbUrl"), prop.getProperty("username"), prop.getProperty("password"));
+            if (connection != null) {
                 log.info("Connected to PostgresSQL");
-            } else{
+            } else {
                 log.info("Failed to connect");
             }
         } catch (SQLException throwables) {
@@ -106,20 +107,20 @@ public class Base{
         }
     }
 
-    // Waiting 30 seconds for an element to be present on the page, checking
-    // for its presence once every 5 seconds.
-    Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
-            .withTimeout(30, SECONDS)
-            .pollingEvery(5, SECONDS)
-            .ignoring(NoSuchElementException.class);
+    public WebElement fluentWait(final By locator) {
+        Wait<WebDriver> wait = new FluentWait<>(driver.get())
+                .withTimeout(Duration.ofSeconds(6))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(NoSuchElementException.class);
 
-    protected Boolean waitForIsClickable(WebElement locator, Integer... timeout) {
-        try {
-            wait(isVisibleInViewport(locator).booleanValue() == true,
-                    (timeout.length > 0 ? timeout[0] : null));
-        } catch (TimeoutException exception) {
-            return false;
-        }
-        return true;
-    }
+        WebElement foo = wait.until(driver -> {
+            if(locator != null){
+                log.info("Element present");
+            }else{
+                log.info("Element not found");
+            }
+            return driver.findElement(locator);
+        });
+        return  foo;
+    };
 }
