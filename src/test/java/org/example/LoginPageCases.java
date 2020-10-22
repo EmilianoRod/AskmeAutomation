@@ -33,14 +33,10 @@ public class LoginPageCases extends Base {
     @Test
     public void loginWithInvalidPassword() throws InterruptedException, SQLException {
         LoginPage login = basePageNavigation();
-        Thread.sleep(2000);
         ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
         set.next();
-        Thread.sleep(2000);
         login.LogIn(set.getString(1), "incorrectpassword");
-        Thread.sleep(2000);
         Assert.assertTrue(isVisibleInViewport(login.getErrorTextCredencialesInvalidas()));
-        Thread.sleep(2000);
         System.out.println("Test completed");
     }
 
@@ -49,7 +45,6 @@ public class LoginPageCases extends Base {
         LoginPage login = basePageNavigation();
         login.getSubmitButton().click();
         log.info("Botón ingresar clickeado");
-        Thread.sleep(2000);
         Assert.assertTrue(isVisibleInViewport(login.getEmailIsRequired()));
         Assert.assertTrue(isVisibleInViewport(login.getPasswordIsRequired()));
         System.out.println("Test completed");
@@ -62,7 +57,6 @@ public class LoginPageCases extends Base {
         while(set.next()){
             login.LogIn(set.getString(1), "password");
             ResultPage resultPage = new ResultPage(getDriver());
-            Thread.sleep(2000);
             Assert.assertTrue(isVisibleInViewport(resultPage.getResultTitle()));
             resultPage.logOut();
         }
@@ -81,13 +75,13 @@ public class LoginPageCases extends Base {
     public void loginWithInvalidEmailAndThenLoginWithValidEmail() throws InterruptedException, SQLException {
         LoginPage login = basePageNavigation();
         login.LogIn("prueba@@prueba.com", "132456897");
-        Thread.sleep(1000);
         Assert.assertTrue(isVisibleInViewport(login.getEmailIsInvalid()));
         login.getEmailInput().clear();
         login.getPasswordInput().clear();
-        login.LogIn("erodriguez@effectussoftware.com", "password");
+        ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
+        set.next();
+        login.LogIn(set.getString(1), "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(2000);
         Assert.assertTrue(isVisibleInViewport(resultPage.getResultTitle()));
     }
 

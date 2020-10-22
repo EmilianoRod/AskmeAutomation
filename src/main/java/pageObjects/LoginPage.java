@@ -27,33 +27,31 @@ public class LoginPage extends Base {
         this.driver = driver;
     }
 
-    public WebElement getEmailInput(){
-        return driver.findElement(emailInput);
-    }
+    public WebElement getEmailInput(){  return fluentWait(emailInput); }
 
     public WebElement getPasswordInput(){
-        return driver.findElement(passwordInput);
+        return fluentWait(passwordInput);
     }
 
     public WebElement getSubmitButton(){
-        return driver.findElement(submitButton);
+        return fluentWait(submitButton);
     }
 
     public WebElement getErrorText(){
-        return driver.findElement(errorText);
+        return fluentWait(errorText);
     }
 
     public WebElement getErrorTextCredencialesInvalidas(){
-        return driver.findElement(errorTextCredencialesInvalidas);
+        return fluentWait(errorTextCredencialesInvalidas);
     }
 
-    public WebElement getResultPageElement(){ return driver.findElement(resultsPageElement); }
+    public WebElement getResultPageElement(){ return fluentWait(resultsPageElement); }
 
-    public WebElement getEmailIsRequired(){ return driver.findElement(emailIsRequired); }
+    public WebElement getEmailIsRequired(){ return fluentWait(emailIsRequired); }
 
-    public WebElement getPasswordIsRequired(){ return driver.findElement(passwordIsRequired); }
+    public WebElement getPasswordIsRequired(){ return fluentWait(passwordIsRequired); }
 
-    public WebElement getEmailIsInvalid(){ return driver.findElement(emailIsInvalid); }
+    public WebElement getEmailIsInvalid(){ return fluentWait(emailIsInvalid); }
 
 
 
@@ -65,7 +63,6 @@ public class LoginPage extends Base {
             getEmailInput().sendKeys(email);
             getPasswordInput().sendKeys(password);
             getSubmitButton().click();
-            Thread.sleep(2000);
             isVisibleInViewport(getResultPageElement());
             log.info("Sesión iniciada");
         } catch(Exception e){
