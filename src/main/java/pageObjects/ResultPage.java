@@ -20,12 +20,12 @@ public class ResultPage extends Base {
     private By myEmailButton = By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/label[1]");
 
 
-    public WebElement getLateralMenuButtons(int i){return driver.findElement(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[" + i + "]"));}//i=1..6
+    public WebElement getLateralMenuButtons(int i){return fluentWait(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[" + i + "]"));}//i=1..6
     public WebElement getLogOutButton(){
-        return driver.findElement(logOutButton);
+        return fluentWait(logOutButton);
     }
-    public WebElement getResultTitle(){ return driver.findElement(resultTitle); }
-    public WebElement getEmailButton(){ return driver.findElement(myEmailButton); }
+    public WebElement getResultTitle(){ return fluentWait(resultTitle); }
+    public WebElement getEmailButton(){ return fluentWait(myEmailButton); }
 
 
     public void logOut() throws InterruptedException {

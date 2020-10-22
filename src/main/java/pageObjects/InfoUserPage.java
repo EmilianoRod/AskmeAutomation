@@ -20,14 +20,14 @@ public class InfoUserPage extends Base {
     private By emailInvalidMessage = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/label[2]");
 
 
-    public WebElement getMyEmailText(){ return driver.findElement(myEmailText); }
-    public WebElement getEditButton(){ return driver.findElement(editButton); }
-    public WebElement getEmailinput(){ return driver.findElement(emailInput); }
-    public WebElement getPasswordinput(){ return driver.findElement(passwordInput); }
-    public WebElement getconfirmPasswordinput(){ return driver.findElement(confirmPasswordInput); }
-    public WebElement getSaveButton(){ return driver.findElement(saveButton); }
-    public WebElement getPasswordsNotMatch(){ return driver.findElement(passwordsNotMatch); }
-    public WebElement getEmailInvalidMessage(){ return driver.findElement(emailInvalidMessage); }
+    public WebElement getMyEmailText(){ return fluentWait(myEmailText); }
+    public WebElement getEditButton(){ return fluentWait(editButton); }
+    public WebElement getEmailinput(){ return fluentWait(emailInput); }
+    public WebElement getPasswordinput(){ return fluentWait(passwordInput); }
+    public WebElement getconfirmPasswordinput(){ return fluentWait(confirmPasswordInput); }
+    public WebElement getSaveButton(){ return fluentWait(saveButton); }
+    public WebElement getPasswordsNotMatch(){ return fluentWait(passwordsNotMatch); }
+    public WebElement getEmailInvalidMessage(){ return fluentWait(emailInvalidMessage); }
 
 
 
