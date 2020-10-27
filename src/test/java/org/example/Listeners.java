@@ -25,8 +25,8 @@ import resources.ExtentManager;
 
 public class Listeners extends Base implements ITestListener {
 
-    private static ExtentReports extent = ExtentManager.createInstance();
-    private static ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
+    private static final ExtentReports extent = ExtentManager.createInstance();
+    private static final ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();
 
     public void onTestStart(ITestResult result) {
         // TODO Auto-generated method stub

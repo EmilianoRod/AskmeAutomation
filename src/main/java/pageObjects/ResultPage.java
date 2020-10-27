@@ -7,7 +7,6 @@ import org.testng.Assert;
 import resources.Base;
 
 
-@SuppressWarnings("SpellCheckingInspection")
 public class ResultPage extends Base {
     public WebDriver driver;
     public ResultPage(WebDriver driver){
