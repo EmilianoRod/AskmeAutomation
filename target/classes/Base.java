@@ -8,12 +8,12 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import javax.sound.midi.SysexMessage;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -21,10 +21,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.Duration;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
 
 public class Base {
 
@@ -107,20 +105,42 @@ public class Base {
         }
     }
 
+//    public WebElement fluentWait(final By locator) {
+//        Wait<WebDriver> wait = new FluentWait<>(driver.get())
+//                .withTimeout(Duration.ofSeconds(8))
+//                .pollingEvery(Duration.ofSeconds(2))
+//                .ignoring(NoSuchElementException.class);
+//
+//        WebElement foo = wait.until(driver -> {
+//            if(locator != null){
+//                log.info("Element present");
+//            }else{
+//                log.info("Element not found");
+//            }
+//            return driver.findElement(locator);
+//        });
+//        return  foo;
+//    }
+
     public WebElement fluentWait(final By locator) {
         Wait<WebDriver> wait = new FluentWait<>(driver.get())
-                .withTimeout(Duration.ofSeconds(6))
+                .withTimeout(Duration.ofSeconds(8))
                 .pollingEvery(Duration.ofSeconds(2))
                 .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
-        WebElement foo = wait.until(driver -> {
-            if(locator != null){
-                log.info("Element present");
-            }else{
-                log.info("Element not found");
+        WebElement foo = wait.until((Function<WebDriver, WebElement>) (WebDriver driver) -> {
+            try {
+                WebElement element = driver.findElement(locator);
+                if (element.isDisplayed()) {
+                    return element;
+                }
+            } catch (Exception e) {
+
             }
-            return driver.findElement(locator);
+            return null;
         });
-        return  foo;
-    };
+        return foo;
+    }
+
 }

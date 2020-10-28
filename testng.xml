@@ -6,8 +6,10 @@
     </listeners>
     <test name="TestProject">
         <classes>
-            <class name="org.example.LoginPageCases">
-            </class>
+            <class name="org.example.LoginPageCases"></class>
+            <class name="org.example.AdminsTestCases"></class>
+            <class name="org.example.InfoUserTestCases"></class>
+            <class name="org.example.SurveyPageTestCases"></class>
         </classes>
     </test>
 </suite>

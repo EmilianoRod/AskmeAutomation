@@ -2,7 +2,6 @@ package org.example;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.InfoUserPage;
@@ -33,10 +32,8 @@ public class InfoUserTestCases extends Base {
         LoginPage login = basePageNavigation();
         login.LogIn("erodriguez@effectussoftware.com", "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(1500);
         resultPage.getEmailButton().click();
         InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Thread.sleep(1500);
         Assert.assertTrue(infoPage.getMyEmailText().getText().contains("erodriguez@effectussoftware.com"));
     }
 
@@ -48,12 +45,9 @@ public class InfoUserTestCases extends Base {
         set.next();
         login.LogIn(set.getString(1), "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(2500);
         resultPage.getEmailButton().click();
         InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Thread.sleep(1500);
         infoPage.getEditButton().click();
-        Thread.sleep(1000);
         Random rand = new Random();
         int random = rand.nextInt(1000);
         String email = "erodriguez+" + random + "@effectussoftware.com";
@@ -62,7 +56,6 @@ public class InfoUserTestCases extends Base {
         infoPage.getPasswordinput().sendKeys("password");
         infoPage.getconfirmPasswordinput().sendKeys("password");
         infoPage.getSaveButton().click();
-        Thread.sleep(1000);
       //  Assert.assertTrue(infoPage.getMyEmailText().getAttribute("value").contentEquals(email));
         Assert.assertTrue(infoPage.getMyEmailText().getText().contentEquals(email));
     }
@@ -74,12 +67,9 @@ public class InfoUserTestCases extends Base {
         set.next();
         login.LogIn(set.getString(1), "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(2000);
         resultPage.getEmailButton().click();
         InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Thread.sleep(1500);
         infoPage.getEditButton().click();
-        Thread.sleep(1000);
         Random rand = new Random();
         int random = rand.nextInt(1000);
         String email = "erodriguez+" + random + "@effectussoftware.com";
@@ -88,7 +78,6 @@ public class InfoUserTestCases extends Base {
         infoPage.getPasswordinput().sendKeys("password");
         infoPage.getconfirmPasswordinput().sendKeys("password1");
         infoPage.getSaveButton().click();
-        Thread.sleep(1500);
         Assert.assertTrue(isVisibleInViewport(infoPage.getPasswordsNotMatch()));
     }
 
@@ -100,12 +89,9 @@ public class InfoUserTestCases extends Base {
         set.next();
         login.LogIn(set.getString(1), "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(2000);
         resultPage.getEmailButton().click();
         InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Thread.sleep(1500);
         infoPage.getEditButton().click();
-        Thread.sleep(1000);
         Random rand = new Random();
         int random = rand.nextInt(1000);
         String email = "erodriguez+" + random + "@effectussoftware.com";
@@ -121,24 +107,16 @@ public class InfoUserTestCases extends Base {
         set.next();
         login.LogIn(set.getString(1), "password");
         ResultPage resultPage = new ResultPage(getDriver());
-        Thread.sleep(2000);
         resultPage.getEmailButton().click();
         InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Thread.sleep(1500);
         infoPage.getEditButton().click();
-        Thread.sleep(1000);
         infoPage.getEmailinput().clear();
         infoPage.getEmailinput().sendKeys(email);
         infoPage.getPasswordinput().sendKeys(password);
         infoPage.getconfirmPasswordinput().sendKeys(password);
         infoPage.getSaveButton().click();
-        Thread.sleep(1000);
         Assert.assertTrue(isVisibleInViewport(infoPage.getEmailInvalidMessage()));
     }
-
-
-
-
 
     @DataProvider
     public Object[][] getDataInvalidEmail(){

@@ -6,9 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="AskmeAutomation" />
         <module name="Askme web Automation" />
         <module name="Askme Web Automation" />
+        <module name="AskmeAutomation" />
+        <module name="AskmeWebAutomation" />
       </profile>
     </annotationProcessing>
   </component>

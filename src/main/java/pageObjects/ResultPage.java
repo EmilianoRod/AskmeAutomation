@@ -7,7 +7,6 @@ import org.testng.Assert;
 import resources.Base;
 
 
-@SuppressWarnings("SpellCheckingInspection")
 public class ResultPage extends Base {
     public WebDriver driver;
     public ResultPage(WebDriver driver){
@@ -21,9 +20,7 @@ public class ResultPage extends Base {
 
 
     public WebElement getLateralMenuButtons(int i){return fluentWait(By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[" + i + "]"));}//i=1..6
-    public WebElement getLogOutButton(){
-        return fluentWait(logOutButton);
-    }
+    public WebElement getLogOutButton(){ return fluentWait(logOutButton); }
     public WebElement getResultTitle(){ return fluentWait(resultTitle); }
     public WebElement getEmailButton(){ return fluentWait(myEmailButton); }
 
