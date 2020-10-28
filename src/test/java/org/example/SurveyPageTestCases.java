@@ -3,6 +3,7 @@ package org.example;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -127,19 +128,28 @@ public class SurveyPageTestCases extends Base{
         Thread.sleep(2000);
         int RowsDropdownNum = surveyPage.getRowsLabelsAreaDropdown().size();
         int surveysNum = surveyPage.getRowsTable().size();
-        int random_int = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
+        int rowTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
         int random_int2 = (int)(Math.random() * (RowsDropdownNum - 1 + 1) + 1);
-        int numberOfLabels = surveyPage.getNumberOfLabels(random_int).size();
-        surveyPage.getAssignAreaButton(random_int, numberOfLabels).click();
+        int numberOfLabels = surveyPage.getNumberOfLabels(rowTable).size();
+        surveyPage.getAssignAreaButton(rowTable, numberOfLabels).click();
         Thread.sleep(2000);
+        String nameAreaToAdd = surveyPage.getLabelsAreaDropdown(random_int2).getText();
         surveyPage.getLabelsAreaDropdown(random_int2).click();
         Thread.sleep(2000);
         int rowNum2 = surveyPage.getRowsLabelsAreaDropdown().size();
         int random_int3 = (int)(Math.random() * (rowNum2 - 1 + 1) + 1);
+        String nameBranchToAdd = surveyPage.getLabelsAreaDropdown(random_int3).getText();
         surveyPage.getLabelsAreaDropdown(random_int3).click();
-        surveyPage.getTitle().click();
-        Thread.sleep(5000);
-
-
+        Actions action = new Actions(surveyPage.driver); //click outside dropdown to close it
+        action.moveByOffset(200,45).click().perform();
+        action.moveByOffset(200,300).click().perform();
+        System.out.println(numberOfLabels);
+        System.out.println(surveyPage.getNumberOfLabels(rowTable).size());
+        Thread.sleep(1000);
+        Assert.assertTrue(numberOfLabels == (surveyPage.getNumberOfLabels(rowTable).size() - 1));
+        Assert.assertTrue(surveyPage.getAreaLabelInTable(rowTable, numberOfLabels).getText().equals(nameAreaToAdd));
+        Assert.assertTrue(surveyPage.getBranchLabelInTable(rowTable, numberOfLabels).getText().equals(nameBranchToAdd));
     }
+
+
 }
