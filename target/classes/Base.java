@@ -24,8 +24,7 @@ import java.util.Properties;
 import java.util.function.Function;
 
 
-public class Base {
-
+public class Base{
     public Properties prop;
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static Logger log = LogManager.getLogger(Base.class.getName());
@@ -105,23 +104,6 @@ public class Base {
         }
     }
 
-//    public WebElement fluentWait(final By locator) {
-//        Wait<WebDriver> wait = new FluentWait<>(driver.get())
-//                .withTimeout(Duration.ofSeconds(8))
-//                .pollingEvery(Duration.ofSeconds(2))
-//                .ignoring(NoSuchElementException.class);
-//
-//        WebElement foo = wait.until(driver -> {
-//            if(locator != null){
-//                log.info("Element present");
-//            }else{
-//                log.info("Element not found");
-//            }
-//            return driver.findElement(locator);
-//        });
-//        return  foo;
-//    }
-
     public WebElement fluentWait(final By locator) {
         Wait<WebDriver> wait = new FluentWait<>(driver.get())
                 .withTimeout(Duration.ofSeconds(8))
@@ -136,7 +118,7 @@ public class Base {
                     return element;
                 }
             } catch (Exception e) {
-
+                e.printStackTrace();
             }
             return null;
         });

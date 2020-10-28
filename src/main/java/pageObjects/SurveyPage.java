@@ -22,7 +22,7 @@ public class SurveyPage extends Base{
     private By editButtonInThreePoint = By.xpath("//body/div[@id='transitions-popper']/div[1]/div[1]");
     private By nameIsRequiredLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/label[2]");
     private By rowsLabelsAreaDropdown = By.xpath("//body/div[2]/div[3]/div[1]/ul[1]/div");
-    private By title = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/label[1]");
+    private By surveyButtonLateralMenu = By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[3]/label[1]");
 
     public WebElement getAddSurveyButton(){ return fluentWait(addSurveyButton); }
     public WebElement getNameInput(){ return fluentWait(nameInput); }
@@ -38,7 +38,9 @@ public class SurveyPage extends Base{
     public WebElement getLabelsAreaDropdown(int i){ return fluentWait(By.xpath("//body/div[2]/div[3]/div[1]/ul[1]/div["+i+"]/div[1]/span[1]/div[1]/span[1]"));}
     public List<WebElement> getRowsLabelsAreaDropdown(){ return driver.findElements(rowsLabelsAreaDropdown); }
     public List<WebElement> getNumberOfLabels(int i){ return driver.findElements(By.xpath("//tbody/tr["+i+"]/td[2]/div")); }
-    public WebElement getTitle(){return driver.findElement(title); }
+    public WebElement getSurveyButtonLateralMenu(){return fluentWait(surveyButtonLateralMenu); }
+    public WebElement getAreaLabelInTable(int numRow, int numLabels){ return fluentWait(By.xpath("//tbody/tr["+numRow+"]/td[2]/div["+numLabels+"]/div[1]/span[1]"));}
+    public WebElement getBranchLabelInTable(int numRow, int numLabels){ return fluentWait(By.xpath("//tbody/tr["+numRow+"]/td[2]/div["+numLabels+"]/div[2]/span[1]"));}
 
 
 
