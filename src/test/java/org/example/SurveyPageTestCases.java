@@ -131,7 +131,7 @@ public class SurveyPageTestCases extends Base{
         int rowTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
         int random_int2 = (int)(Math.random() * (RowsDropdownNum - 1 + 1) + 1);
         int numberOfLabels = surveyPage.getNumberOfLabels(rowTable).size();
-        surveyPage.getAssignAreaButton(rowTable, numberOfLabels).click();
+        surveyPage.getAssignAreaButton(rowTable).click();
         Thread.sleep(2000);
         String nameAreaToAdd = surveyPage.getLabelsAreaDropdown(random_int2).getText();
         surveyPage.getLabelsAreaDropdown(random_int2).click();
@@ -141,15 +141,73 @@ public class SurveyPageTestCases extends Base{
         String nameBranchToAdd = surveyPage.getLabelsAreaDropdown(random_int3).getText();
         surveyPage.getLabelsAreaDropdown(random_int3).click();
         Actions action = new Actions(surveyPage.driver); //click outside dropdown to close it
-        action.moveByOffset(200,45).click().perform();
-        action.moveByOffset(200,300).click().perform();
-        System.out.println(numberOfLabels);
-        System.out.println(surveyPage.getNumberOfLabels(rowTable).size());
+        if(rowTable > 8){
+            action.moveByOffset(200,500).click().perform();
+        }else{
+            action.moveByOffset(200,45).click().perform();
+        }
         Thread.sleep(1000);
         Assert.assertTrue(numberOfLabels == (surveyPage.getNumberOfLabels(rowTable).size() - 1));
         Assert.assertTrue(surveyPage.getAreaLabelInTable(rowTable, numberOfLabels).getText().equals(nameAreaToAdd));
         Assert.assertTrue(surveyPage.getBranchLabelInTable(rowTable, numberOfLabels).getText().equals(nameBranchToAdd));
     }
 
+    @Test
+    public void unassingASurveyArea() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int surveysNum = surveyPage.getRowsTable().size();
+        int rowSelectedInTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
+        int numberOfLabels = surveyPage.getNumberOfLabels(rowSelectedInTable).size() - 1;
+        while(numberOfLabels < 1){
+            rowSelectedInTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
+            numberOfLabels = surveyPage.getNumberOfLabels(rowSelectedInTable).size() - 1;
+        }
+        int labelNumberToDelete = (int)(Math.random() * (numberOfLabels - 1 + 1) + 1);
+        String nameAreaToDelete = surveyPage.getAreaLabelInTable(rowSelectedInTable, labelNumberToDelete).getText();
+        String nameBranchToDelete = surveyPage.getBranchLabelInTable(rowSelectedInTable, numberOfLabels-1).getText();
+        surveyPage.getDeleteAreaButtonLabel(rowSelectedInTable, labelNumberToDelete).click();
+        Assert.assertTrue(surveyPage.getAreaLabelInTable(rowSelectedInTable, labelNumberToDelete ).isDisplayed());
+        Thread.sleep(5000);
+    }
+
+    @Test
+    public void assignAllTheAreasPosiblesInASurvey() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        Thread.sleep(2000);
+      //  int RowsDropdownNum = surveyPage.getRowsLabelsAreaDropdown().size();
+        int surveysNum = surveyPage.getRowsTable().size();
+        Thread.sleep(2000);
+//        int numberOfLabels = 0;
+        for (int i = 1; i <= surveysNum; i++){  //for each survey i, do
+           int numberOfLabels = surveyPage.getNumberOfLabels(i).size() - 1;
+            for(int j = 1 ; j <= numberOfLabels; j++ ){
+                surveyPage.getAssignAreaButton(i).click();
+                int rowNum2 = surveyPage.getRowsLabelsAreaDropdown().size();
+                for(int k = 1 ; k < rowNum2 ; k++){
+                    Thread.sleep(2000);
+                    String nameAreaToAdd = surveyPage.getLabelsAreaDropdown(k).getText();
+                    surveyPage.getLabelsAreaDropdown(k).click();
+                    Thread.sleep(2000);
+                    int rowNum3 = surveyPage.getRowsLabelsBranchesDropdown().size();
+                    for(int l = 1 ; l < rowNum3 ; l++ ){
+                        String nameBranchToAdd = surveyPage.getLabelsBranchesDropdown(l).getText();
+                        surveyPage.getLabelsBranchesDropdown(l).click();
+                        Actions action = new Actions(surveyPage.driver); //click outside dropdown to close it
+                        if (i > 8) {
+                            action.moveByOffset(200, 500).click().perform();
+                        } else {
+                            action.moveByOffset(200, 45).click().perform();
+                        }
+                        Thread.sleep(1000);
+                        Assert.assertTrue(numberOfLabels == (surveyPage.getNumberOfLabels(k).size() - 1));
+                        //  Assert.assertTrue(surveyPage.getAreaLabelInTable(k, numberOfLabels).getText().equals(nameAreaToAdd));
+                        Assert.assertTrue(surveyPage.getBranchLabelInTable(k, numberOfLabels).getText().equals(nameBranchToAdd));
+                    }
+                }
+
+            }
+
+        }
+    }
 
 }

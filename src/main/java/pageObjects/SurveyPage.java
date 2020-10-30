@@ -21,7 +21,8 @@ public class SurveyPage extends Base{
     private By tableRows = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/table[1]/tbody[1]/tr");
     private By editButtonInThreePoint = By.xpath("//body/div[@id='transitions-popper']/div[1]/div[1]");
     private By nameIsRequiredLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/label[2]");
-    private By rowsLabelsAreaDropdown = By.xpath("//body/div[2]/div[3]/div[1]/ul[1]/div");
+    private By rowsLabelsAreaDropdown = By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div");
+    private By rowsLabelsBranchesDropdown = By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div");
     private By surveyButtonLateralMenu = By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[3]/label[1]");
 
     public WebElement getAddSurveyButton(){ return fluentWait(addSurveyButton); }
@@ -34,13 +35,21 @@ public class SurveyPage extends Base{
     public WebElement getEditButtonInThreePoint(){ return fluentWait(editButtonInThreePoint); }
     public WebElement getTable(){ return fluentWait(table); }
     public WebElement getNameIsRequiredLabel(){ return fluentWait(nameIsRequiredLabel); }
-    public WebElement getAssignAreaButton(int i, int j){ return fluentWait(By.xpath("//tbody/tr["+i+"]/td[2]/div["+j+"]/div[1]/div[1]/button[1]")); } //i for row and j for number of labels
-    public WebElement getLabelsAreaDropdown(int i){ return fluentWait(By.xpath("//body/div[2]/div[3]/div[1]/ul[1]/div["+i+"]/div[1]/span[1]/div[1]/span[1]"));}
+    public WebElement getAssignAreaButton(int i){ return fluentWait(By.xpath("//tbody/tr["+i+"]/td[2]/div/div[1]/div[1]/button[1]")); } //i for row and
+    public WebElement getLabelsAreaDropdown(int i){ return fluentWait(By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div["+i+"]/div[1]/span[1]/div[1]/span[1]"));}
+
+    //body/div[3]/div[3]/div[1]/ul[1]/div[1]/div[1]/span[1]/div[1]/span[1]
+
+    public WebElement getLabelsBranchesDropdown(int i){ return fluentWait(By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div["+i+"]/div[1]/span[1]/div[1]/span[1]"));}
     public List<WebElement> getRowsLabelsAreaDropdown(){ return driver.findElements(rowsLabelsAreaDropdown); }
+    public List<WebElement> getRowsLabelsBranchesDropdown(){ return driver.findElements(rowsLabelsBranchesDropdown); }
+
     public List<WebElement> getNumberOfLabels(int i){ return driver.findElements(By.xpath("//tbody/tr["+i+"]/td[2]/div")); }
     public WebElement getSurveyButtonLateralMenu(){return fluentWait(surveyButtonLateralMenu); }
     public WebElement getAreaLabelInTable(int numRow, int numLabels){ return fluentWait(By.xpath("//tbody/tr["+numRow+"]/td[2]/div["+numLabels+"]/div[1]/span[1]"));}
     public WebElement getBranchLabelInTable(int numRow, int numLabels){ return fluentWait(By.xpath("//tbody/tr["+numRow+"]/td[2]/div["+numLabels+"]/div[2]/span[1]"));}
+    public WebElement getDeleteAreaButtonLabel(int numRow, int numLabels){ return fluentWait(By.xpath("//tbody/tr["+numRow+"]/td[2]/div["+numLabels+"]/div[2]/*[1]")); }
+//body/div[2]/div[3]/div[1]/ul[1]/div[2]/div[1]/span[1]/div[1]/span[1]
 
 
 
