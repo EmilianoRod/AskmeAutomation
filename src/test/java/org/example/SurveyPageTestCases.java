@@ -304,5 +304,124 @@ public class SurveyPageTestCases extends Base{
         Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionTextIsRequiredLabel()));
     }
 
+    @Test
+    public void addFacesQuestionToSurveyWithSatisfactionIndex(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(2).click();
+        int satisfactionIndex = (int)(Math.random() * (10 - 1 + 1) + 1);
+        String index = String.valueOf(satisfactionIndex);
+        surveyPage.getSatisfactionIndexInput().sendKeys(index);
+        surveyPage.getSaveQuestionButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        if(rowSelectedInTable >= 9){
+            JavascriptExecutor js = (JavascriptExecutor) getDriver();
+            WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+            js.executeScript("arguments[0].scrollIntoView();", element);
+        }
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void addMultipleOptionQuestionToSurveyWithTwoOptions(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(3).click();
+        String generatedStringForOption1 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(3).sendKeys(generatedStringForOption1);
+        String generatedStringForOption2 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(4).sendKeys(generatedStringForOption2);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        if(rowSelectedInTable >= 10){
+            JavascriptExecutor js = (JavascriptExecutor) getDriver();
+            WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+            js.executeScript("arguments[0].scrollIntoView();", element);
+        }
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+
+    }
+
+    @Test
+    public void addMultipleOptionQuestionToSurveyWithSixOptions(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(3).click();
+        String generatedStringForOption1 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(3).sendKeys(generatedStringForOption1);
+        String generatedStringForOption2 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(4).sendKeys(generatedStringForOption2);
+        surveyPage.getAddOptionButton().click();
+        String generatedStringForOption3 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(5).sendKeys(generatedStringForOption3);
+        surveyPage.getAddOptionButton().click();
+        String generatedStringForOption4 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(6).sendKeys(generatedStringForOption4);
+        surveyPage.getAddOptionButton().click();
+        String generatedStringForOption5 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(7).sendKeys(generatedStringForOption5);
+        surveyPage.getAddOptionButton().click();
+        String generatedStringForOption6 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(8).sendKeys(generatedStringForOption6);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        if(rowSelectedInTable >= 10){
+            JavascriptExecutor js = (JavascriptExecutor) getDriver();
+            WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+            js.executeScript("arguments[0].scrollIntoView();", element);
+        }
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+
+    }
+
+
 
 }

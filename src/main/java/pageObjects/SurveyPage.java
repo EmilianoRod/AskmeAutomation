@@ -14,15 +14,15 @@ public class SurveyPage extends Base{
     }
 
     final private By addSurveyButton = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/button[1]");
-    final  private By nameInput = By.tagName("input");
-    final  private By saveButton = By.xpath("//button[contains(text(),'Guardar')]");
-    final  private By backFromDetailSurveyToMainSurvey = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/button[1]/img[1]");
-    final  private By table = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/table[1]");
-    final  private By tableRows = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/table[1]/tbody[1]/tr");
-    final  private By editButtonInThreePoint = By.xpath("//body/div[@id='transitions-popper']/div[1]/div[1]");
-    final  private By nameIsRequiredLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/label[2]");
-    final  private By rowsLabelsAreaDropdown = By.xpath("//*[@class='MuiButtonBase-root MuiListItem-root sc-fznNTe fnbSrb MuiListItem-gutters MuiListItem-button']");
-    final  private By rowsLabelsBranchesDropdown = By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div");
+    final private By nameInput = By.tagName("input");
+    final private By saveButton = By.xpath("//button[contains(text(),'Guardar')]");
+    final private By backFromDetailSurveyToMainSurvey = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/button[1]/img[1]");
+    final private By table = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/table[1]");
+    final private By tableRows = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[3]/table[1]/tbody[1]/tr");
+    final private By editButtonInThreePoint = By.xpath("//body/div[@id='transitions-popper']/div[1]/div[1]");
+    final private By nameIsRequiredLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[1]/form[1]/div[1]/div[1]/label[2]");
+    final private By rowsLabelsAreaDropdown = By.xpath("//*[@class='MuiButtonBase-root MuiListItem-root sc-fznNTe fnbSrb MuiListItem-gutters MuiListItem-button']");
+    final private By rowsLabelsBranchesDropdown = By.xpath("//body/div[3]/div[3]/div[1]/ul[1]/div");
     final private By surveyButtonLateralMenu = By.xpath("//body/div[@id='root']/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/button[3]/label[1]");
     final private By dropdownSelectAreas = By.xpath("//body/div[3]/div[3]");
     final private By inputSelectAreas = By.xpath("//body[1]/div[3]/div[3]/div[1]/div[2]/input[1]");
@@ -33,6 +33,10 @@ public class SurveyPage extends Base{
     final private By questionTextIsRequiredLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/label[1]");
     final private By typeOfQuestionsDropDown =  By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]");
     final private By satisfactionIndexInput = By.xpath("//input[@class='sc-AxhUy kbFuQf question']");
+    final private By option1Input = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/input[1]");
+    final private By option2Input = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/input[1]");
+    final private By addOptionButton = By.xpath("//button[@class='sc-pbIaG jGPUoW margin']");
+
     //final private By questionColumnInQuestionsTable = By.xpath("//tbody/tr["+i+"]/td[2]");
 
     public WebElement getAddSurveyButton(){ return fluentWait(addSurveyButton); }
@@ -67,4 +71,7 @@ public class SurveyPage extends Base{
     public WebElement getTypeOfQuestionsDropDown(){return fluentWait(typeOfQuestionsDropDown); }
     public WebElement getOptionsInTypeOfQuestionsDropdown(int i){ return fluentWait(By.xpath("//ul[@class='MuiList-root sc-fzoPby cSPfCG question MuiList-padding']/div["+i+"]"));} // 1 for scale, 2 for faces, 3 for multiple option, 4 for text, 5 for contact
     public WebElement getSatisfactionIndexInput(){ return fluentWait(satisfactionIndexInput); }
+    public WebElement getAddOptionButton(){ return fluentWait(addOptionButton); }
+    public WebElement getOptionInput(int i){return fluentWait(By.xpath("//div[@class='sc-qQYBZ euMZXN']/div[2]/div["+i+"]/div[1]/input")); } //i=3 for first input, i=8 for six input
+
 }
