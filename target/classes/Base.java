@@ -11,6 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -20,6 +21,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.time.Duration;
+import java.util.List;
 import java.util.Properties;
 import java.util.function.Function;
 
@@ -52,7 +54,11 @@ public class Base{
             }
             driver.set(new ChromeDriver(options));
         } else if (browserName.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//geckodriver");
+            if (System.getProperty("os.name").contains("Windows")) {
+                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//geckodriverWindows.exe");
+            } else if (System.getProperty("os.name").contains("Mac")) {
+                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//geckodriverMac");
+            }
             driver.set(new FirefoxDriver());
         } else if (browserName.equals("safari")) {
             driver.set(new SafariDriver());
@@ -124,5 +130,30 @@ public class Base{
         });
         return foo;
     }
+
+    public List<WebElement> fluentWaitForMultipleElements(final By locator) {
+        Wait<WebDriver> wait = new FluentWait<>(driver.get())
+                .withTimeout(Duration.ofSeconds(8))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+
+        List<WebElement> foo = wait.until((WebDriver driver) -> {
+            try {
+                List<WebElement> elements = driver.findElements(locator);
+                for (WebElement element : elements) {
+                    Assert.assertTrue(element.isDisplayed());
+                }
+                    return elements;
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println(e.getLocalizedMessage());
+            }
+            return null;
+        });
+        return foo;
+    }
+
 
 }

@@ -14,7 +14,7 @@ public class LoginPage extends Base {
 
     private By emailInput = By.xpath("//input[@name='email']");
     private By passwordInput = By.xpath("//input[@name='password']");
-    private By submitButton = By.xpath("//button[@class='sc-AxmLO clVYPn']");
+    private By submitButton = By.xpath("//body/div[@id='root']/div[1]/div[2]/form[1]/button[1]");
     private By errorText = By.xpath("//label[contains(text(),'El email no es válido')]");
     private By errorTextCredencialesInvalidas = By.xpath("//label[contains(text(),'Credenciales invalidas')]");
     private By resultsPageElement = By.xpath("//body/div[@id='root']/div/div/label[1]");
