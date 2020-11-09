@@ -1,8 +1,8 @@
-pageObjects/LoginPage.class
-pageObjects/SurveyPage.class
-resources/ExtentManager.class
-pageObjects/AdminsPage.class
-pageObjects/ResultPage.class
-org/example/App.class
-pageObjects/InfoUserPage.class
-resources/Base.class
+pageObjects\ResultPage.class
+resources\ExtentManager.class
+pageObjects\InfoUserPage.class
+pageObjects\LoginPage.class
+resources\Base.class
+org\example\App.class
+pageObjects\AdminsPage.class
+pageObjects\SurveyPage.class

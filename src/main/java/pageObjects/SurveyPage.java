@@ -36,6 +36,7 @@ public class SurveyPage extends Base{
     final private By option1Input = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[3]/div[1]/input[1]");
     final private By option2Input = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/input[1]");
     final private By addOptionButton = By.xpath("//button[@class='sc-pbIaG jGPUoW margin']");
+    final private By shouldHaveBetweenTwoAndSixAnswersLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/label[1]");
 
     //final private By questionColumnInQuestionsTable = By.xpath("//tbody/tr["+i+"]/td[2]");
 
@@ -73,5 +74,6 @@ public class SurveyPage extends Base{
     public WebElement getSatisfactionIndexInput(){ return fluentWait(satisfactionIndexInput); }
     public WebElement getAddOptionButton(){ return fluentWait(addOptionButton); }
     public WebElement getOptionInput(int i){return fluentWait(By.xpath("//div[@class='sc-qQYBZ euMZXN']/div[2]/div["+i+"]/div[1]/input")); } //i=3 for first input, i=8 for six input
+    public WebElement getShouldHaveBetweenTwoAndSixAnswersLabel(){return fluentWait(shouldHaveBetweenTwoAndSixAnswersLabel); }
 
 }
