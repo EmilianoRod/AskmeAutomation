@@ -422,6 +422,40 @@ public class SurveyPageTestCases extends Base{
 
     }
 
+    @Test
+    public void addMultipleOptionQuestionToSurveyWithTwoEmptyOptions() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int) (Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(3).click();
+        surveyPage.getSaveButton().click();
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getShouldHaveBetweenTwoAndSixAnswersLabel();
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getShouldHaveBetweenTwoAndSixAnswersLabel()));
+    }
 
-
+    @Test
+    public void addMultipleOptionQuestionToSurveyWithThreeOptionsOneEmpty(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(3).click();
+        String generatedStringForOption1 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(3).sendKeys(generatedStringForOption1);
+        String generatedStringForOption2 = RandomStringUtils.random(10, true, false);
+        surveyPage.getOptionInput(4).sendKeys(generatedStringForOption2);
+        surveyPage.getAddOptionButton().click();
+        surveyPage.getSaveButton().click();
+    }
 }
