@@ -90,7 +90,7 @@ public class Base{
                 , element);
     }
 
-    public void connect() {
+    public void connect(){
         try {
             try {
                 log.info("Connecting to database...");

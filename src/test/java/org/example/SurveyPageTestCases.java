@@ -1,14 +1,10 @@
 package org.example;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
@@ -19,11 +15,11 @@ import resources.Base;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.time.Duration;
 
 
 public class SurveyPageTestCases extends Base{
     Statement st;
+
     public SurveyPage basePageNavigation(){
         WebDriver driver = getDriver();
         driver.get(prop.getProperty("url"));
@@ -50,7 +46,6 @@ public class SurveyPageTestCases extends Base{
         SurveyPage surveyPage = new SurveyPage(getDriver());
         return surveyPage;
     }
-
 
     @Test
     public void createASurvey(){
@@ -423,7 +418,7 @@ public class SurveyPageTestCases extends Base{
     }
 
     @Test
-    public void addMultipleOptionQuestionToSurveyWithTwoEmptyOptions() throws InterruptedException {
+    public void addMultipleOptionQuestionToSurveyWithTwoEmptyOptions(){
         SurveyPage surveyPage = basePageNavigation();
         int numberOfSurveys = surveyPage.getRowsTableNumber().size();
         int rowSelectedInTable = (int) (Math.random() * (numberOfSurveys - 1 + 1) + 1);
@@ -457,5 +452,280 @@ public class SurveyPageTestCases extends Base{
         surveyPage.getOptionInput(4).sendKeys(generatedStringForOption2);
         surveyPage.getAddOptionButton().click();
         surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        if(rowSelectedInTable >= 10){
+            JavascriptExecutor js = (JavascriptExecutor) getDriver();
+            WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+            js.executeScript("arguments[0].scrollIntoView();", element);
+        }
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
     }
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeIDWithoutDescription(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeIDWithDescription() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        String description = RandomStringUtils.random(20, true, false);
+        surveyPage.getDescriptionField().sendKeys(description);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeEmailWithoutDescription() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        surveyPage.getOpenDropdownSubTypeQuestionType().click();
+        surveyPage.getSubTypeQuestionType(2).click();
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Thread.sleep(2000);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeEmailWithDescription() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        surveyPage.getOpenDropdownSubTypeQuestionType().click();
+        surveyPage.getSubTypeQuestionType(2).click();
+        String description = RandomStringUtils.random(20, true, false);
+        surveyPage.getDescriptionField().sendKeys(description);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        System.out.println(rowSelectedInTable);
+        System.out.println(rowSelectedInTable);
+        System.out.println(rowSelectedInTable);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Thread.sleep(2000);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeMobileNumberWithoutDescription() throws InterruptedException {
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        surveyPage.getOpenDropdownSubTypeQuestionType().click();
+        surveyPage.getSubTypeQuestionType(3).click();
+        String description = RandomStringUtils.random(20, true, false);
+        surveyPage.getDescriptionField().sendKeys(description);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Thread.sleep(2000);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+
+    @Test
+    public void addAContactTypeQuestionWithSubtypeMobileNumberWithDescription() throws InterruptedException{
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
+        surveyPage.getNameSurvey(rowSelectedInTable).click();
+        surveyPage.getAddNewQuestion().click();
+        String generatedString = RandomStringUtils.random(10, true, false);
+        surveyPage.getQuestionTextInput().sendKeys(generatedString);
+        surveyPage.getTypeOfQuestionsDropDown().click();
+        surveyPage.getOptionsInTypeOfQuestionsDropdown(5).click();
+        surveyPage.getOpenDropdownSubTypeQuestionType().click();
+        surveyPage.getSubTypeQuestionType(3).click();
+        String description = RandomStringUtils.random(20, true, false);
+        surveyPage.getDescriptionField().sendKeys(description);
+        surveyPage.getSaveButton().click();
+        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
+        boolean esta = false;
+        int i = 1;
+        while(i <= numberOfRowsQuestionTable){
+            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
+                esta = true;
+                break;
+            }
+            i++;
+        }
+        Assert.assertTrue(esta);
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        WebElement element = surveyPage.getQuestionColumnInQuestionsTable(i);
+        js.executeScript("arguments[0].scrollIntoView();", element);
+        Thread.sleep(2000);
+        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
+    }
+
+    @Test
+    public void editTitleQuestionScalaType(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int i = 1;
+        boolean esta = false;
+        while(i <= numberOfSurveys && !esta){
+            surveyPage.getNameSurvey(i).click();
+            int numberOfQuestions = surveyPage.getNumberOfRowsQuestionsTable().size();
+            int j = 1;
+            while(j <= numberOfQuestions && !esta){
+                if(surveyPage.getTypeOfQuestionInTable(j).getText().equals("Escala")){
+                    esta = true;
+                    surveyPage.getThreePointsQuestionButton(j).click();
+                    surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                    surveyPage.getQuestionTextInput().clear();
+                    String generatedString = RandomStringUtils.random(10, true, false);
+                    surveyPage.getQuestionTextInput().sendKeys(generatedString);
+                    surveyPage.getSaveButton().click();
+                    Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(j)));
+                    Assert.assertTrue(surveyPage.getQuestionColumnInQuestionsTable(j).getText().equals(generatedString));
+                }
+                j++;
+            }
+            i++;
+        }
+    }
+
+    @Test
+    public void editTitleQuestionFacesType(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int i = 1;
+        boolean esta = false;
+        while(i <= numberOfSurveys && !esta){
+            surveyPage.getNameSurvey(i).click();
+            int numberOfQuestions = surveyPage.getNumberOfRowsQuestionsTable().size();
+            int j = 1;
+            while(j <= numberOfQuestions && !esta){
+                if(surveyPage.getTypeOfQuestionInTable(j).getText().equals("Caras")){
+                    esta = true;
+                    surveyPage.getThreePointsQuestionButton(j).click();
+                    surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                    surveyPage.getQuestionTextInput().clear();
+                    String generatedString = RandomStringUtils.random(10, true, false);
+                    surveyPage.getQuestionTextInput().sendKeys(generatedString);
+                    surveyPage.getSaveButton().click();
+                    Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(j)));
+                    Assert.assertTrue(surveyPage.getQuestionColumnInQuestionsTable(j).getText().equals(generatedString));
+                }
+                j++;
+            }
+            i++;
+        }
+    }
+
+
+
+
 }
