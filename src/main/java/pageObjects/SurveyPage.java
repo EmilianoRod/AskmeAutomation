@@ -1,10 +1,15 @@
 package pageObjects;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import resources.Base;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 public class SurveyPage extends Base{
@@ -37,6 +42,9 @@ public class SurveyPage extends Base{
     final private By option2Input = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/input[1]");
     final private By addOptionButton = By.xpath("//button[@class='sc-pbIaG jGPUoW margin']");
     final private By shouldHaveBetweenTwoAndSixAnswersLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/label[1]");
+    final private By descriptionField = By.xpath("//textarea[@class='sc-AxgMl dxZxmV questionName']");
+    final private By subTypeQuestionType = By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]");
+
 
     //final private By questionColumnInQuestionsTable = By.xpath("//tbody/tr["+i+"]/td[2]");
 
@@ -75,5 +83,15 @@ public class SurveyPage extends Base{
     public WebElement getAddOptionButton(){ return fluentWait(addOptionButton); }
     public WebElement getOptionInput(int i){return fluentWait(By.xpath("//div[@class='sc-qQYBZ euMZXN']/div[2]/div["+i+"]/div[1]/input")); } //i=3 for first input, i=8 for six input
     public WebElement getShouldHaveBetweenTwoAndSixAnswersLabel(){return fluentWait(shouldHaveBetweenTwoAndSixAnswersLabel); }
+    public WebElement getDescriptionField(){return fluentWait(descriptionField); }
+    public WebElement getOpenDropdownSubTypeQuestionType(){ return fluentWait(subTypeQuestionType); }
+    public WebElement getSubTypeQuestionType(int i){ return fluentWait(By.xpath("//ul[@class='MuiList-root sc-fzoPby cSPfCG question MuiList-padding']/div["+i+"]")); } //i=1 for CI, i=2 for Email, i=3 for mobile phone
+    public WebElement getTypeOfQuestionInTable(int rowNum){ return fluentWait(By.xpath("//tbody[@class='MuiTableBody-root']/tr["+rowNum+"]/td[3]")); }
+    public WebElement getThreePointsQuestionButton(int rowNum){ return fluentWait(By.xpath("//tbody[@class='MuiTableBody-root']/tr["+rowNum+"]/td[5]/div")); }
+    public WebElement getOptionsInThreePointsDropDownQuestionTable(int i){ return fluentWait(By.xpath("//div[@class='sc-pJkiN csfYLt']/div["+i+"]")); }//i=1 for edit and 2 for delete
+
+
+
+
 
 }
