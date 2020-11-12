@@ -141,9 +141,9 @@ public class Base{
         List<WebElement> foo = wait.until((WebDriver driver) -> {
             try {
                 List<WebElement> elements = driver.findElements(locator);
-                for (WebElement element : elements) {
-                    Assert.assertTrue(element.isDisplayed());
-                }
+//                for (WebElement element : elements) {
+//                    Assert.assertTrue(element.isDisplayed());
+//                }
                     return elements;
 
             } catch (Exception e) {
@@ -155,5 +155,9 @@ public class Base{
         return foo;
     }
 
+    public void moveToElement(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();;
+        js.executeScript("arguments[0].scrollIntoView();", element);
+    }
 
 }

@@ -55,7 +55,7 @@ public class LoginPage extends Base {
 
 
 
-    public void LogIn(String email, String password) throws InterruptedException {
+    public void LogIn(String email, String password){
         Assert.assertTrue(getEmailInput().isDisplayed());
         Assert.assertTrue(getPasswordInput().isDisplayed());
         Assert.assertTrue(getSubmitButton().isDisplayed());
