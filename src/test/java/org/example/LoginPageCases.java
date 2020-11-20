@@ -1,57 +1,36 @@
 package org.example;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
 import pageObjects.ResultPage;
-import resources.Base;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 
-public class LoginPageCases extends Base {
-
-    Statement st;
-
-    public LoginPage basePageNavigation() throws SQLException {
-        WebDriver driver = getDriver();
-        driver.get(prop.getProperty("url"));
-        driver.manage().window().maximize();
-        LoginPage login = new LoginPage(driver);
-        connect();
-        st = connection.createStatement();
-        return login;
-    }
-
-
+public class LoginPageCases extends LoginPage{
 
     @Test
-    public void loginWithInvalidPassword() throws InterruptedException, SQLException {
+    public void loginWithInvalidPassword() throws SQLException {
         LoginPage login = basePageNavigation();
         ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
         set.next();
         login.LogIn(set.getString(1), "incorrectpassword");
         Assert.assertTrue(isVisibleInViewport(login.getErrorTextCredencialesInvalidas()));
-        System.out.println("Test completed");
     }
 
     @Test
-    public void loginWithoutEmailAndPassword() throws InterruptedException, SQLException {
+    public void loginWithoutEmailAndPassword(){
         LoginPage login = basePageNavigation();
         login.getSubmitButton().click();
-        log.info("Botón ingresar clickeado");
         Assert.assertTrue(isVisibleInViewport(login.getEmailIsRequired()));
         Assert.assertTrue(isVisibleInViewport(login.getPasswordIsRequired()));
-        System.out.println("Test completed");
     }
 
     @Test
-    public void validateLoginFlow() throws InterruptedException, SQLException {
+    public void validateLoginFlow() throws SQLException {
         LoginPage login = basePageNavigation();
         ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
         while(set.next()){
@@ -63,16 +42,14 @@ public class LoginPageCases extends Base {
     }
 
     @Test(dataProvider="getDataInvalidEmail")
-    public void loginWithInvalidEmail(String email, String password) throws SQLException, InterruptedException {
+    public void loginWithInvalidEmail(String email, String password){
         LoginPage login = basePageNavigation();
         login.LogIn(email, password);
         Assert.assertTrue(isVisibleInViewport(login.getErrorText()));
-        getDriver().navigate().refresh();
-        log.info("Test completed");
     }
 
     @Test
-    public void loginWithInvalidEmailAndThenLoginWithValidEmail() throws InterruptedException, SQLException {
+    public void loginWithInvalidEmailAndThenLoginWithValidEmail() throws SQLException {
         LoginPage login = basePageNavigation();
         login.LogIn("prueba@@prueba.com", "132456897");
         Assert.assertTrue(isVisibleInViewport(login.getEmailIsInvalid()));
@@ -102,7 +79,6 @@ public class LoginPageCases extends Base {
         //1st row
         data[1][0]="erodriguez+1@effectussoftware.com";
         data[1][1]="password";
-
         return data;
     }
 
@@ -126,7 +102,6 @@ public class LoginPageCases extends Base {
 
         data[3][0]="erodriguez#effectussoftware..com";
         data[3][1]="password";
-
         return data;
     }
 }

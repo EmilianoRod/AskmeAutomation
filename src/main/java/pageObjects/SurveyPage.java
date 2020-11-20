@@ -17,6 +17,7 @@ public class SurveyPage extends Base{
     public SurveyPage(WebDriver driver){
         this.driver = driver;
     }
+    public SurveyPage(){}
     Statement st;
 
 
@@ -45,10 +46,9 @@ public class SurveyPage extends Base{
     final private By shouldHaveBetweenTwoAndSixAnswersLabel = By.xpath("//body/div[@id='root']/div[1]/div[2]/div[1]/div[3]/label[1]");
     final private By descriptionField = By.xpath("//textarea[@class='sc-AxgMl dxZxmV questionName']");
     final private By subTypeQuestionType = By.xpath("//body[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[4]/div[1]/div[1]/div[1]");
+    final private By cancelEditQuestionButton = By.xpath("//div[@class='sc-fznyAO CWQMf']");
 
 
-    public SurveyPage() {
-    }
 
 
     //final private By questionColumnInQuestionsTable = By.xpath("//tbody/tr["+i+"]/td[2]");
@@ -95,7 +95,7 @@ public class SurveyPage extends Base{
     public WebElement getTypeOfQuestionInTable(int rowNum){ return fluentWait(By.xpath("//tbody[@class='MuiTableBody-root']/tr["+rowNum+"]/td[3]")); }
     public WebElement getThreePointsQuestionButton(int rowNum){ return fluentWait(By.xpath("//tbody[@class='MuiTableBody-root']/tr["+rowNum+"]/td[5]/div")); }
     public WebElement getOptionsInThreePointsDropDownQuestionTable(int i){ return fluentWait(By.xpath("//div[@class='sc-pJkiN csfYLt']/div["+i+"]")); }//i=1 for edit and 2 for delete
-
+    public WebElement getCancelEditQuestionButton(){ return fluentWait(cancelEditQuestionButton); }
 
 
 
@@ -105,19 +105,27 @@ public class SurveyPage extends Base{
         driver.manage().window().maximize();
         LoginPage login = new LoginPage(driver);
         connect();
-        try {
-            st = connection.createStatement();
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
         ResultSet set = null;
         try {
+            st = connection.createStatement();
             set = st.executeQuery("Select email from admin_users where email like 'erod%' and type = 'AdminUser::Company';");
-            set.next();
-            login.LogIn(set.getString(1), "password");
-        } catch (SQLException throwables) {
+        } catch (SQLException throwables){
             throwables.printStackTrace();
         }
+        Boolean displayed = false;
+        do{
+            try{
+                set.next();
+                login.LogIn(set.getString(1), "password");
+                try{
+                    displayed = login.getResultTitle().isDisplayed();
+                } catch (Exception ignore){}
+                if(!displayed){
+                    login.getEmailInput().clear();
+                    login.getPasswordInput().clear();
+                }
+            }catch (Exception e){}
+        } while(!displayed);
         ResultPage resultPage = new ResultPage(getDriver());
         resultPage.getLateralMenuButtons(3).click();
         SurveyPage surveyPage = new SurveyPage(getDriver());
@@ -142,6 +150,7 @@ public class SurveyPage extends Base{
                     String generatedString = RandomStringUtils.random(10, true, false);
                     surveyPage.getQuestionTextInput().sendKeys(generatedString);
                     surveyPage.getSaveButton().click();
+                    //moveToElement(surveyPage.getQuestionColumnInQuestionsTable(j));
                     Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(j)));
                     Assert.assertTrue(surveyPage.getQuestionColumnInQuestionsTable(j).getText().equals(generatedString));
                 }
@@ -152,33 +161,6 @@ public class SurveyPage extends Base{
             }
             i++;
         }
-    }
-
-    public void addAContactTypeQuestionWithSubtype(String Subtype, boolean Descripcion){
-        SurveyPage surveyPage = basePageNavigation();
-        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
-        int rowSelectedInTable = (int)(Math.random() * (numberOfSurveys - 1 + 1) + 1);
-        surveyPage.getNameSurvey(rowSelectedInTable).click();
-        try{
-            surveyPage.getAddNewQuestion().click();
-        }catch (Exception e){
-            surveyPage.getAddNewQuestionCentered().click();
-        }
-
-        surveyPage.getSaveButton().click();
-        int numberOfRowsQuestionTable = surveyPage.getNumberOfRowsQuestionsTable().size();
-        boolean esta = false;
-        int i = 1;
-        while(i <= numberOfRowsQuestionTable){
-//            if(surveyPage.getQuestionColumnInQuestionsTable(i).getText().equals(generatedString)){
-//                esta = true;
-//                break;
-//            }
-            i++;
-        }
-        Assert.assertTrue(esta);
-        moveToElement(surveyPage.getQuestionColumnInQuestionsTable(i));
-        Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
     }
 
     public void addQuestionToSurvey(String type, Boolean withText, Boolean withSatisfactionIndex, int validOptions, int invalidOptions, String SubtypeForContactType, boolean DescripcionForContactType){
@@ -274,5 +256,6 @@ public class SurveyPage extends Base{
             Assert.assertTrue(isVisibleInViewport(surveyPage.getQuestionColumnInQuestionsTable(i)));
         }
     }
+
 }
 

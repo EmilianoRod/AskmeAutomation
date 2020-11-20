@@ -1,52 +1,35 @@
 package org.example;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pageObjects.InfoUserPage;
-import pageObjects.LoginPage;
-import pageObjects.ResultPage;
-import resources.Base;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Random;
 
-public class InfoUserTestCases extends Base {
-    Statement st;
-
-    public LoginPage basePageNavigation() throws SQLException {
-        WebDriver driver = getDriver();
-        driver.get(prop.getProperty("url"));
-        driver.manage().window().maximize();
-        LoginPage login = new LoginPage(driver);
-        connect();
-        st = connection.createStatement();
-        return login;
-    }
+public class InfoUserTestCases extends InfoUserPage{
 
     @Test
-    public void seeMyUserInfo() throws InterruptedException, SQLException {
-        LoginPage login = basePageNavigation();
-        login.LogIn("erodriguez@effectussoftware.com", "password");
-        ResultPage resultPage = new ResultPage(getDriver());
-        resultPage.getEmailButton().click();
-        InfoUserPage infoPage = new InfoUserPage(getDriver());
-        Assert.assertTrue(infoPage.getMyEmailText().getText().contains("erodriguez@effectussoftware.com"));
+    public void seeMyUserInfo() {
+        InfoUserPage infoPage = basePageNavigation();
+        ResultSet set = null;
+        String email = "";
+        try {
+            set = st.executeQuery("Select email from admin_users where email like 'erod%' and type = 'AdminUser::Company';");
+            set.next();
+            email = set.getString(1);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        Assert.assertTrue(infoPage.getMyEmailText().getText().equals(email));
     }
 
 
     @Test
-    public void editMyEmail() throws SQLException, InterruptedException {
-        LoginPage login = basePageNavigation();
-        ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
-        set.next();
-        login.LogIn(set.getString(1), "password");
-        ResultPage resultPage = new ResultPage(getDriver());
-        resultPage.getEmailButton().click();
-        InfoUserPage infoPage = new InfoUserPage(getDriver());
+    public void editMyEmail(){
+        InfoUserPage infoPage = basePageNavigation();
         infoPage.getEditButton().click();
         Random rand = new Random();
         int random = rand.nextInt(1000);
@@ -56,19 +39,12 @@ public class InfoUserTestCases extends Base {
         infoPage.getPasswordinput().sendKeys("password");
         infoPage.getconfirmPasswordinput().sendKeys("password");
         infoPage.getSaveButton().click();
-      //  Assert.assertTrue(infoPage.getMyEmailText().getAttribute("value").contentEquals(email));
         Assert.assertTrue(infoPage.getMyEmailText().getText().contentEquals(email));
     }
 
     @Test
-    public void editMyInfoIncorrectly() throws SQLException, InterruptedException {
-        LoginPage login = basePageNavigation();
-        ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
-        set.next();
-        login.LogIn(set.getString(1), "password");
-        ResultPage resultPage = new ResultPage(getDriver());
-        resultPage.getEmailButton().click();
-        InfoUserPage infoPage = new InfoUserPage(getDriver());
+    public void editMyInfoIncorrectly(){
+        InfoUserPage infoPage = basePageNavigation();
         infoPage.getEditButton().click();
         Random rand = new Random();
         int random = rand.nextInt(1000);
@@ -78,37 +54,26 @@ public class InfoUserTestCases extends Base {
         infoPage.getPasswordinput().sendKeys("password");
         infoPage.getconfirmPasswordinput().sendKeys("password1");
         infoPage.getSaveButton().click();
-        Assert.assertTrue(isVisibleInViewport(infoPage.getPasswordsNotMatch()));
+        Assert.assertTrue(infoPage.getPasswordsNotMatch().isDisplayed());
     }
 
- //https://effectus.atlassian.net/jira/software/projects/AM/boards/19/backlog?selectedIssue=AM-294
-    @Test
-    public void editMyEmailWithoutPassword() throws SQLException, InterruptedException {
-        LoginPage login = basePageNavigation();
-        ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
-        set.next();
-        login.LogIn(set.getString(1), "password");
-        ResultPage resultPage = new ResultPage(getDriver());
-        resultPage.getEmailButton().click();
-        InfoUserPage infoPage = new InfoUserPage(getDriver());
-        infoPage.getEditButton().click();
-        Random rand = new Random();
-        int random = rand.nextInt(1000);
-        String email = "erodriguez+" + random + "@effectussoftware.com";
-        infoPage.getEmailinput().clear();
-        infoPage.getEmailinput().sendKeys(email);
-        infoPage.getSaveButton().click();
-    }
+// https://effectus.atlassian.net/jira/software/projects/AM/boards/19/backlog?selectedIssue=AM-294
+//    @Test
+//    public void editMyEmailWithoutPassword(){
+//        InfoUserPage infoPage = basePageNavigation();
+//        infoPage.getEditButton().click();
+//        Random rand = new Random();
+//        int random = rand.nextInt(1000);
+//        String email = "erodriguez+" + random + "@effectussoftware.com";
+//        infoPage.getEmailinput().clear();
+//        infoPage.getEmailinput().sendKeys(email);
+//        infoPage.getSaveButton().click();
+//        Assert.assertTrue();
+//    }
 
     @Test(dataProvider="getDataInvalidEmail")
-    public void editMyInfoWithInvalidEmail(String email, String password) throws SQLException, InterruptedException {
-        LoginPage login = basePageNavigation();
-        ResultSet set = st.executeQuery("Select email from admin_users where email like 'erod%';");
-        set.next();
-        login.LogIn(set.getString(1), "password");
-        ResultPage resultPage = new ResultPage(getDriver());
-        resultPage.getEmailButton().click();
-        InfoUserPage infoPage = new InfoUserPage(getDriver());
+    public void editMyInfoWithInvalidEmail(String email, String password){
+        InfoUserPage infoPage = basePageNavigation();
         infoPage.getEditButton().click();
         infoPage.getEmailinput().clear();
         infoPage.getEmailinput().sendKeys(email);
@@ -136,7 +101,7 @@ public class InfoUserTestCases extends Base {
         data[2][0]="erodriguez@effectussoftware..c";
         data[2][1]="password";
 
-        data[3][0]="erodriguez#effectussoftware..com";
+        data[3][0]="erodriguez#effectussoftware.com";
         data[3][1]="password";
 
         return data;
