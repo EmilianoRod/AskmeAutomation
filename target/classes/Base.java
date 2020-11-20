@@ -38,8 +38,8 @@ public class Base{
         prop = new Properties();
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "//src//main//java//resources//data.properties");
         prop.load(fis);
-        //String browserName=System.getProperty("browser");  // Uncomment this line if you are sending parameter from Maven
-        String browserName = prop.getProperty("browser"); //comment this line if you are sending parameter from Maven
+        String browserName=System.getProperty("browser");  // Uncomment this line if you are sending parameter from Maven
+      //  String browserName = prop.getProperty("browser"); //comment this line if you are sending parameter from Maven
         System.out.println(browserName);
 
         if (browserName.contains("chrome")) {
