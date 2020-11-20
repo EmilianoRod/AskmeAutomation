@@ -44,9 +44,9 @@ public class Base{
 
         if (browserName.contains("chrome")) {
             if (System.getProperty("os.name").contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//chromedriverWindows.exe");
+                System.setProperty("webdriver.chrome.driver", "//src//main//java//resources//drivers//chromedriverWindows.exe");
             } else if (System.getProperty("os.name").contains("Mac")) {
-                System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//chromedriverMac");
+                System.setProperty("webdriver.chrome.driver", "//src//main//java//resources//drivers//chromedriverMac");
             }
             ChromeOptions options = new ChromeOptions();
             if (browserName.contains("headless")) {
@@ -55,9 +55,9 @@ public class Base{
             driver.set(new ChromeDriver(options));
         } else if (browserName.equals("firefox")) {
             if (System.getProperty("os.name").contains("Windows")) {
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//geckodriverWindows.exe");
+                System.setProperty("webdriver.gecko.driver", "//src//main//java//resources//drivers//geckodriverWindows.exe");
             } else if (System.getProperty("os.name").contains("Mac")) {
-                System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//geckodriverMac");
+                System.setProperty("webdriver.gecko.driver", "//src//main//java//resources//drivers//geckodriverMac");
             }
             driver.set(new FirefoxDriver());
         } else if (browserName.equals("safari")) {
