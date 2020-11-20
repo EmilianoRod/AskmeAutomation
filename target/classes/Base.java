@@ -23,6 +23,7 @@ import java.sql.SQLException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 import java.util.function.Function;
 
 
@@ -31,7 +32,6 @@ public class Base{
     protected static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
     public static Logger log = LogManager.getLogger(Base.class.getName());
     public Connection connection = null;
-
 
     @BeforeMethod
     public void setUp() throws IOException {
@@ -65,9 +65,7 @@ public class Base{
         }
     }
 
-    public WebDriver getDriver() {
-        return driver.get();
-    }
+    public WebDriver getDriver() { return driver.get(); }
 
     @AfterMethod
     public void tearDown() {
@@ -112,12 +110,12 @@ public class Base{
 
     public WebElement fluentWait(final By locator) {
         Wait<WebDriver> wait = new FluentWait<>(driver.get())
-                .withTimeout(Duration.ofSeconds(8))
-                .pollingEvery(Duration.ofSeconds(2))
+                .withTimeout(Duration.ofSeconds(6))
+                .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
 
-        WebElement foo = wait.until((Function<WebDriver, WebElement>) (WebDriver driver) -> {
+        WebElement foo = wait.until((WebDriver driver) -> {
             try {
                 WebElement element = driver.findElement(locator);
                 if (element.isDisplayed()) {
@@ -133,7 +131,7 @@ public class Base{
 
     public List<WebElement> fluentWaitForMultipleElements(final By locator) {
         Wait<WebDriver> wait = new FluentWait<>(driver.get())
-                .withTimeout(Duration.ofSeconds(8))
+                .withTimeout(Duration.ofSeconds(6))
                 .pollingEvery(Duration.ofSeconds(1))
                 .ignoring(NoSuchElementException.class);
         wait.until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -141,11 +139,7 @@ public class Base{
         List<WebElement> foo = wait.until((WebDriver driver) -> {
             try {
                 List<WebElement> elements = driver.findElements(locator);
-//                for (WebElement element : elements) {
-//                    Assert.assertTrue(element.isDisplayed());
-//                }
                     return elements;
-
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println(e.getLocalizedMessage());
@@ -159,5 +153,13 @@ public class Base{
         JavascriptExecutor js = (JavascriptExecutor) getDriver();;
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
+
+    public String generateEmail(){
+        Random rand = new Random();
+        int random = rand.nextInt(9999);
+        String email = "erodriguez+" + random + "@effectussoftware.com";
+        return email;
+    }
+
 
 }

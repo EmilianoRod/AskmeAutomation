@@ -114,7 +114,4 @@ public class Listeners extends Base implements ITestListener {
         String fileName = methodName + "-" + d.toString().replace(":", "_").replace(" ", "_") + ".png";
         return fileName;
     }
-
-
-
 }

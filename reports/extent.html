@@ -52,7 +52,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 14, 2020 06:01:00 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Nov 13, 2020 04:27:26 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -67,8 +67,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
@@ -112,10 +111,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='44.444%'><span class='strong'>4</span> test(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='11.111%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='44.444%'>4</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='18.75%'>9</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='81.25%'>39</span> skipped
                 </div>
             </div>
         </div>
@@ -133,17 +132,17 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
-						<span class='test-time'>Oct 14, 2020 06:01:09 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithoutEmailAndPassword</span>
+						<span class='test-time'>Nov 13, 2020 04:27:32 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:09 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:15 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+245ms</span>
+	<span class='label start-time'>Nov 13, 2020 04:27:32 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:27:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+650ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -155,11 +154,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:01:15 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:47 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithoutEmailAndPassword-Fri_Nov_13_16_27_47_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithoutEmailAndPassword-Fri_Nov_13_16_27_47_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithoutEmailAndPassword Failed</b></span>
 					
 				</td>
 			</tr>
@@ -170,15 +185,15 @@
 				</li>
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
 					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmailAndThenLoginWithValidEmail</span>
-						<span class='test-time'>Oct 14, 2020 06:01:09 PM</span>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidPassword</span>
+						<span class='test-time'>Nov 13, 2020 04:27:32 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:09 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:21 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+597ms</span>
+	<span class='label start-time'>Nov 13, 2020 04:27:32 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:27:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+533ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -192,23 +207,125 @@
 		<tbody>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>6:01:20 PM</td>
+				<td class='timestamp'>4:27:47 PM</td>
 				<td class='step-details'>
-						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br> java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br> java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)<br> org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)<br> org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> pageObjects.ResultPage.getResultTitle(ResultPage.java:25)<br> org.example.LoginPageCases.loginWithInvalidEmailAndThenLoginWithValidEmail(LoginPageCases.java:89)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br> java.base/java.lang.reflect.Method.invoke(Method.java:566)<br> org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br> org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br> org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br> org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br> org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br> org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br> java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)<br> java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)<br> java.base/java.lang.Thread.run(Thread.java:834)]</details>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
 					
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>6:01:21 PM</td>
+				<td class='timestamp'>4:27:48 PM</td>
 				<td class='step-details'>
 						<b><font color=red>Screenshot of failure</font></b>
-					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmailAndThenLoginWithValidEmail-Wed_Oct_14_18_01_20_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmailAndThenLoginWithValidEmail-Wed_Oct_14_18_01_20_UYT_2020.png'>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidPassword-Fri_Nov_13_16_27_47_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidPassword-Fri_Nov_13_16_27_47_UYT_2020.png'>
 				</td>
 			</tr>
 			<tr class='log' status='fail'>
 				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-				<td class='timestamp'>6:01:21 PM</td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithInvalidPassword Failed</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:27:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:27:32 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:27:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+307ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:47 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_27_47_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_27_47_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithInvalidEmail Failed</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmailAndThenLoginWithValidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:27:32 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:27:32 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:27:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 16s+309ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:47 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmailAndThenLoginWithValidEmail-Fri_Nov_13_16_27_47_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmailAndThenLoginWithValidEmail-Fri_Nov_13_16_27_47_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:27:48 PM</td>
 				<td class='step-details'>
 						<span class='badge white-text red'><b>Test Method loginWithInvalidEmailAndThenLoginWithValidEmail Failed</b></span>
 					
@@ -219,87 +336,17 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
-					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithoutEmailAndPassword</span>
-						<span class='test-time'>Oct 14, 2020 06:01:09 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:09 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:14 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 4s+874ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:01:14 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text green'><b>Test Method loginWithoutEmailAndPasswordSuccessful</b></span>
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
-					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidPassword</span>
-						<span class='test-time'>Oct 14, 2020 06:01:20 PM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:20 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:27 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 7s+26ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:01:27 PM</td>
-				<td class='step-details'>
-						<span class='badge white-text green'><b>Test Method loginWithInvalidPasswordSuccessful</b></span>
-					
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
-						<span class='test-time'>Oct 14, 2020 06:01:20 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Nov 13, 2020 04:27:51 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:20 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:25 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+73ms</span>
+	<span class='label start-time'>Nov 13, 2020 04:27:51 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+693ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -311,11 +358,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='pass'>
-				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-				<td class='timestamp'>6:01:25 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text green'><b>Test Method loginWithInvalidEmailSuccessful</b></span>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:221)<br> resources.Base.fluentWait(Base.java:118)<br> pageObjects.LoginPage.getEmailInput(LoginPage.java:30)<br> pageObjects.LoginPage.LogIn(LoginPage.java:59)<br> org.example.LoginPageCases.loginWithInvalidEmail(LoginPageCases.java:68)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br> java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br> java.base/java.lang.reflect.Method.invoke(Method.java:566)<br> org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)<br> org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)<br> org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br> org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br> org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br> org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br> java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)<br> java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)<br> java.base/java.lang.Thread.run(Thread.java:834)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_08_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_08_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithInvalidEmail Failed</b></span>
 					
 				</td>
 			</tr>
@@ -324,17 +387,60 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active  skip' status='skip' bdd='false' test-id='7'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.AdminsTestCases :: createCompanyAdmin</span>
+						<span class='test-time'>Nov 13, 2020 04:27:51 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:27:51 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+173ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.example.Listeners.onTestFailure(Listeners.java:54)<br> org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:66)<br> org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)<br> org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:651)<br> org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)<br> org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)<br> org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)<br> org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)<br> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)<br> java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)<br> java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)<br> java.base/java.lang.Thread.run(Thread.java:834)]</details>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>org.example.LoginPageCases :: validateLoginFlow</span>
-						<span class='test-time'>Oct 14, 2020 06:01:21 PM</span>
-						<span class='test-status right skip'>skip</span>
+						<span class='test-time'>Nov 13, 2020 04:27:51 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:21 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:21 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+	<span class='label start-time'>Nov 13, 2020 04:27:51 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+513ms</span>
 </div>
 <div class='test-steps'>
 	<table class='bordered table-results'>
@@ -346,46 +452,27 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class='log' status='skip'>
-				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>6:01:21 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text yellow'><b>Test Method validateLoginFlowSkipped</b></span>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:603)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
 					
 				</td>
 			</tr>
-		</tbody>
-	</table>
-</div>
-					</div>
-				</li>
-				<li class='test displayed active  skip' status='skip' bdd='false' test-id='6'>
-					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: testDB</span>
-						<span class='test-time'>Oct 14, 2020 06:01:21 PM</span>
-						<span class='test-status right skip'>skip</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:21 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:21 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
-</div>
-<div class='test-steps'>
-	<table class='bordered table-results'>
-		<thead>
-			<tr>
-				<th>Status</th>
-				<th>Timestamp</th>
-				<th>Details</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr class='log' status='skip'>
-				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>6:01:21 PM</td>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text yellow'><b>Test Method testDBSkipped</b></span>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/validateLoginFlow-Fri_Nov_13_16_28_08_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/validateLoginFlow-Fri_Nov_13_16_28_08_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method validateLoginFlow Failed</b></span>
 					
 				</td>
 			</tr>
@@ -396,14 +483,14 @@
 				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='8'>
 					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
-						<span class='test-time'>Oct 14, 2020 06:01:25 PM</span>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:25 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:25 PM</span>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
 </div>
 <div class='test-steps'>
@@ -418,9 +505,9 @@
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>6:01:25 PM</td>
+				<td class='timestamp'>4:28:08 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text yellow'><b>Test Method loginWithInvalidEmailSkipped</b></span>
+						<span class='badge white-text yellow'><b>Test Method editMyEmailSkipped</b></span>
 					
 				</td>
 			</tr>
@@ -431,14 +518,14 @@
 				</li>
 				<li class='test displayed active  skip' status='skip' bdd='false' test-id='9'>
 					<div class='test-heading'>
-						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
-						<span class='test-time'>Oct 14, 2020 06:01:25 PM</span>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyEmailWithoutPassword</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
 						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Oct 14, 2020 06:01:25 PM</span>
-	<span class='label end-time'>Oct 14, 2020 06:01:25 PM</span>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
 	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
 <div class='test-steps'>
@@ -453,9 +540,1406 @@
 		<tbody>
 			<tr class='log' status='skip'>
 				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
-				<td class='timestamp'>6:01:25 PM</td>
+				<td class='timestamp'>4:28:08 PM</td>
 				<td class='step-details'>
-						<span class='badge white-text yellow'><b>Test Method loginWithInvalidEmailSkipped</b></span>
+						<span class='badge white-text yellow'><b>Test Method editMyEmailWithoutPasswordSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyInfoIncorrectly</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editMyInfoIncorrectlySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editMyInfoWithInvalidEmailSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editMyInfoWithInvalidEmailSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editMyInfoWithInvalidEmailSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editMyInfoWithInvalidEmailSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.InfoUserTestCases :: seeMyUserInfo</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method seeMyUserInfoSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeEmailWithDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+9ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeEmailWithDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeIDWithDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeIDWithDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeIDWithoutDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeIDWithoutDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeMobileNumberWithDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeMobileNumberWithDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeMobileNumberWithoutDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeMobileNumberWithoutDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addATextQuestionToSurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addATextQuestionToSurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAreaToSurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAreaToSurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addDescriptionToAnExistentContactTypeQuestion</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addDescriptionToAnExistentContactTypeQuestionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithSatisfactionIndex</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addFacesQuestionToSurveyWithSatisfactionIndexSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithSatisfactionIndexAndWithoutText</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addFacesQuestionToSurveyWithSatisfactionIndexAndWithoutTextSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithoutSatisfactionIndex</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addFacesQuestionToSurveyWithoutSatisfactionIndexSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithoutSatisfactionIndexAndText</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addFacesQuestionToSurveyWithoutSatisfactionIndexAndTextSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithSixOptions</span>
+						<span class='test-time'>Nov 13, 2020 04:28:08 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:08 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:08 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addMultipleOptionQuestionToSurveyWithSixOptionsSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithThreeOptionsOneEmpty</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addMultipleOptionQuestionToSurveyWithThreeOptionsOneEmptySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithTwoEmptyOptions</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addMultipleOptionQuestionToSurveyWithTwoEmptyOptionsSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithTwoOptions</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addMultipleOptionQuestionToSurveyWithTwoOptionsSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addScaleQuestionToSurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addScaleQuestionToSurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addScaleQuestionToSurveyWithoutText</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addScaleQuestionToSurveyWithoutTextSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: assignAllTheAreasPosiblesInASurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method assignAllTheAreasPosiblesInASurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: createASurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method createASurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: createASurveyWithAnExistingName</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method createASurveyWithAnExistingNameSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: createASurveyWithoutName</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method createASurveyWithoutNameSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editASurvey</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editASurveySkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editDescriptionToAContactTypeQuestion</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editDescriptionToAContactTypeQuestionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editTitleQuestionContactType</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+1ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editTitleQuestionContactTypeSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editTitleQuestionFacesType</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editTitleQuestionFacesTypeSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editTitleQuestionMultipleOptionType</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editTitleQuestionMultipleOptionTypeSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editTitleQuestionScaleType</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editTitleQuestionScaleTypeSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: editTitleQuestionTextType</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method editTitleQuestionTextTypeSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: unassingASurveyArea</span>
+						<span class='test-time'>Nov 13, 2020 04:28:09 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:09 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method unassingASurveyAreaSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  skip' status='skip' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeEmailWithoutDescription</span>
+						<span class='test-time'>Nov 13, 2020 04:28:10 PM</span>
+						<span class='test-status right skip'>skip</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:10 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:10 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='skip'>
+				<td class='status skip' title='skip' alt='skip'><i class='material-icons'>redo</i></td>
+				<td class='timestamp'>4:28:10 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text yellow'><b>Test Method addAContactTypeQuestionWithSubtypeEmailWithoutDescriptionSkipped</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:11 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:11 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+902ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:16 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br> java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br> java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)<br> org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)<br> org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:17 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_16_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_16_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:17 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithInvalidEmail Failed</b></span>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>org.example.LoginPageCases :: loginWithInvalidEmail</span>
+						<span class='test-time'>Nov 13, 2020 04:28:18 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Nov 13, 2020 04:28:18 PM</span>
+	<span class='label end-time'>Nov 13, 2020 04:28:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 5s+911ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:24 PM</td>
+				<td class='step-details'>
+						<details><summary><b><font color=red>Exception Ocurred, click to see details: </font></b></summary>[java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br> java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br> java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br> java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)<br> org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)<br> org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)<br> org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)<br> org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)<br> org.openqa.selenium.By$ByXPath.findElement(By.java:394)<br> org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:182)<br> org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:179)<br> org.openqa.selenium.support.ui.FluentWait.lambda$checkConditionInLoop$2(FluentWait.java:233)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1700)<br> java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1692)<br> java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)<br> java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)<br> java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)<br> java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)<br> java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)]</details>
+					
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:24 PM</td>
+				<td class='step-details'>
+						<b><font color=red>Screenshot of failure</font></b>
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_24_UYT_2020.png' src='/Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/loginWithInvalidEmail-Fri_Nov_13_16_28_24_UYT_2020.png'>
+				</td>
+			</tr>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>4:28:24 PM</td>
+				<td class='step-details'>
+						<span class='badge white-text red'><b>Test Method loginWithInvalidEmail Failed</b></span>
 					
 				</td>
 			</tr>
@@ -492,7 +1976,7 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>9</div>
+					<div class='panel-lead'>48</div>
 				</div>
 			</div>
 			<div class='col s2'>
@@ -504,19 +1988,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 14, 2020 06:01:00 PM</div>
+					<div class='panel-lead'>Nov 13, 2020 04:27:26 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 14, 2020 06:01:27 PM</div>
+			 		<div class='panel-lead'>Nov 13, 2020 04:28:24 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 27s+112ms</div>
+					<div class='panel-lead'>0h 0m 58s+62ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -547,14 +2031,14 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 9,
-				passParent: 4,
-				failParent: 1,
+                parentCount: 48,
+				passParent: 0,
+				failParent: 9,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 4,
-				exceptionsParent: 5,
+				skipParent: 39,
+				exceptionsParent: 48,
 				childCount: 0,
 				passChild: 0,
 				failChild: 0,
@@ -579,7 +2063,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "org.example.LoginPageCases :: loginWithInvalidEmail":5.245,"org.example.LoginPageCases :: loginWithInvalidEmailAndThenLoginWithValidEmail":11.597,"org.example.LoginPageCases :: loginWithoutEmailAndPassword":4.874,"org.example.LoginPageCases :: loginWithInvalidPassword":7.026,"org.example.LoginPageCases :: loginWithInvalidEmail":5.073,"org.example.LoginPageCases :: validateLoginFlow":0.001,"org.example.LoginPageCases :: testDB":0.001,"org.example.LoginPageCases :: loginWithInvalidEmail":0.001,"org.example.LoginPageCases :: loginWithInvalidEmail":0
+			        "org.example.LoginPageCases :: loginWithoutEmailAndPassword":16.65,"org.example.LoginPageCases :: loginWithInvalidPassword":16.533,"org.example.LoginPageCases :: loginWithInvalidEmail":16.307,"org.example.LoginPageCases :: loginWithInvalidEmailAndThenLoginWithValidEmail":16.309,"org.example.LoginPageCases :: loginWithInvalidEmail":17.693,"org.example.AdminsTestCases :: createCompanyAdmin":17.173,"org.example.LoginPageCases :: validateLoginFlow":17.513,"org.example.InfoUserTestCases :: editMyEmail":0.001,"org.example.InfoUserTestCases :: editMyEmailWithoutPassword":0,"org.example.InfoUserTestCases :: editMyInfoIncorrectly":0,"org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail":0,"org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail":0,"org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail":0.001,"org.example.InfoUserTestCases :: editMyInfoWithInvalidEmail":0.001,"org.example.InfoUserTestCases :: seeMyUserInfo":0,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeEmailWithDescription":0.009,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeIDWithDescription":0,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeIDWithoutDescription":0,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeMobileNumberWithDescription":0,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeMobileNumberWithoutDescription":0,"org.example.SurveyPageTestCases :: addATextQuestionToSurvey":0,"org.example.SurveyPageTestCases :: addAreaToSurvey":0,"org.example.SurveyPageTestCases :: addDescriptionToAnExistentContactTypeQuestion":0,"org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithSatisfactionIndex":0,"org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithSatisfactionIndexAndWithoutText":0.001,"org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithoutSatisfactionIndex":0,"org.example.SurveyPageTestCases :: addFacesQuestionToSurveyWithoutSatisfactionIndexAndText":0.001,"org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithSixOptions":0.001,"org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithThreeOptionsOneEmpty":0,"org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithTwoEmptyOptions":0.001,"org.example.SurveyPageTestCases :: addMultipleOptionQuestionToSurveyWithTwoOptions":0,"org.example.SurveyPageTestCases :: addScaleQuestionToSurvey":0.001,"org.example.SurveyPageTestCases :: addScaleQuestionToSurveyWithoutText":0,"org.example.SurveyPageTestCases :: assignAllTheAreasPosiblesInASurvey":0.001,"org.example.SurveyPageTestCases :: createASurvey":0.001,"org.example.SurveyPageTestCases :: createASurveyWithAnExistingName":0,"org.example.SurveyPageTestCases :: createASurveyWithoutName":0,"org.example.SurveyPageTestCases :: editASurvey":0.001,"org.example.SurveyPageTestCases :: editDescriptionToAContactTypeQuestion":0,"org.example.SurveyPageTestCases :: editTitleQuestionContactType":0.001,"org.example.SurveyPageTestCases :: editTitleQuestionFacesType":0,"org.example.SurveyPageTestCases :: editTitleQuestionMultipleOptionType":0,"org.example.SurveyPageTestCases :: editTitleQuestionScaleType":0,"org.example.SurveyPageTestCases :: editTitleQuestionTextType":0,"org.example.SurveyPageTestCases :: unassingASurveyArea":0,"org.example.SurveyPageTestCases :: addAContactTypeQuestionWithSubtypeEmailWithoutDescription":0,"org.example.LoginPageCases :: loginWithInvalidEmail":5.902,"org.example.LoginPageCases :: loginWithInvalidEmail":5.911
 			};
 		</script>
 	

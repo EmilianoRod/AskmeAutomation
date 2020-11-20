@@ -1,12 +1,11 @@
 package org.example;
 
 import org.apache.commons.lang3.RandomStringUtils;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.SurveyPage;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -39,25 +38,25 @@ public class SurveyPageTestCases extends SurveyPage{
         Assert.assertTrue(esta);
     }
 
-    @Test
-    public void createASurveyWithAnExistingName(){ //This is a bug
-        SurveyPage surveyPage = basePageNavigation();
-        surveyPage.getAddSurveyButton().click();
-        ResultSet set = null;
-        try {
-             set = st.executeQuery("select name from surveys");
-             set.next();
-             surveyPage.getNameInput().sendKeys(set.getString(1));
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        surveyPage.getSaveButton().click();
-
-    }
+//    @Test
+//    public void createASurveyWithAnExistingName(){ //This is a bug
+//        SurveyPage surveyPage = basePageNavigation();
+//        surveyPage.getAddSurveyButton().click();
+//        ResultSet set = null;
+//        try {
+//             set = st.executeQuery("select name from surveys");
+//             set.next();
+//             surveyPage.getNameInput().sendKeys(set.getString(1));
+//        } catch (SQLException throwables) {
+//            throwables.printStackTrace();
+//        }
+//        surveyPage.getSaveButton().click();
+//
+//    }
 
     @Test
     public void editASurvey(){
-        SurveyPage surveyPage = this.basePageNavigation();
+        SurveyPage surveyPage = basePageNavigation();
         surveyPage.getThreePointsButton(1).click(); //click on the menu of the first survey
         surveyPage.getEditButtonInThreePoint().click();
         surveyPage.getNameInput().clear();
@@ -78,7 +77,7 @@ public class SurveyPageTestCases extends SurveyPage{
 
     @Test
     public void createASurveyWithoutName(){
-        SurveyPage surveyPage = this.basePageNavigation();
+        SurveyPage surveyPage = basePageNavigation();
         surveyPage.getAddSurveyButton().click();
         surveyPage.getSaveButton().click();
         Assert.assertTrue(isVisibleInViewport(surveyPage.getNameIsRequiredLabel()));
@@ -86,7 +85,7 @@ public class SurveyPageTestCases extends SurveyPage{
 
     @Test
     public void addAreaToSurvey(){
-        SurveyPage surveyPage = this.basePageNavigation();
+        SurveyPage surveyPage = basePageNavigation();
         int surveysNum = surveyPage.getRowsTableNumber().size();
         int rowTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
         int numberOfLabels = surveyPage.getNumberOfLabels(rowTable).size();
@@ -112,7 +111,7 @@ public class SurveyPageTestCases extends SurveyPage{
 
     @Test
     public void unassingASurveyArea() throws InterruptedException {
-        SurveyPage surveyPage = this.basePageNavigation();
+        SurveyPage surveyPage = basePageNavigation();
         int surveysNum = surveyPage.getRowsTableNumber().size();
         int rowSelectedInTable = (int)(Math.random() * (surveysNum - 1 + 1) + 1);
         int numberOfLabels = surveyPage.getNumberOfLabels(rowSelectedInTable).size() - 1; //Because getNumberOfLabels count assign button
@@ -123,11 +122,10 @@ public class SurveyPageTestCases extends SurveyPage{
         int labelNumberToDelete = (int)(Math.random() * (numberOfLabels - 1 + 1) + 1);
         String nameAreaToDelete = surveyPage.getAreaLabelInTable(rowSelectedInTable, labelNumberToDelete).getText();
         String nameBranchToDelete = surveyPage.getBranchLabelInTable(rowSelectedInTable, numberOfLabels).getText();
-        Thread.sleep(5000);
         surveyPage.getDeleteAreaButtonLabel(rowSelectedInTable, labelNumberToDelete).click();
-        Thread.sleep(5000);
+        Thread.sleep(2000);
+        Assert.assertFalse(surveyPage.getAreaLabelInTable(rowSelectedInTable, labelNumberToDelete).getText().equals(nameAreaToDelete) && surveyPage.getBranchLabelInTable(rowSelectedInTable, labelNumberToDelete).getText().equals(nameBranchToDelete));
         Assert.assertTrue(surveyPage.getNumberOfLabels(rowSelectedInTable).size() == numberOfLabels); //Because getNumberOfLabels count assign button
-       // Assert.assertFalse(surveyPage.getAreaLabelInTable(rowSelectedInTable, labelNumberToDelete).getText().equals(nameAreaToDelete) && surveyPage.getBranchLabelInTable(rowSelectedInTable, labelNumberToDelete).getText().equals(nameBranchToDelete));
     }
 
     @Test
@@ -254,6 +252,11 @@ public class SurveyPageTestCases extends SurveyPage{
     }
 
     @Test
+    public void addATextQuestionToSurvey(){
+        addQuestionToSurvey("Texto", true, false, 0, 0, "", false);
+    }
+
+    @Test
     public void editTitleQuestionScaleType(){
         editTitleQuestion("Escala");
     }
@@ -272,4 +275,79 @@ public class SurveyPageTestCases extends SurveyPage{
     public void editTitleQuestionContactType(){
         editTitleQuestion("Contacto");
     }
+
+    @Test
+    public void editTitleQuestionTextType(){
+        editTitleQuestion("Texto");
+    }
+
+    @Test
+    public void editDescriptionToAContactTypeQuestion(){
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int i = 1;
+        boolean esta = false;
+        while(i < numberOfSurveys && !esta){
+            surveyPage.getNameSurvey(i).click();
+            int numberOfQuestions = surveyPage.getNumberOfRowsQuestionsTable().size();
+            int j = 1;
+            while(j < numberOfQuestions && !esta){
+                if(surveyPage.getTypeOfQuestionInTable(j).getText().equals("Contacto")){
+                    esta = true;
+                    surveyPage.getThreePointsQuestionButton(j).click();
+                    surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                    surveyPage.getDescriptionField().clear();
+                    String generatedString = RandomStringUtils.random(30, true, false);
+                    surveyPage.getDescriptionField().sendKeys(generatedString);
+                    surveyPage.getSaveButton().click();
+                    surveyPage.getThreePointsQuestionButton(j).click();
+                    surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                    Assert.assertTrue(surveyPage.getDescriptionField().getText().equals(generatedString));
+                }
+                j++;
+            }
+            if(!esta){
+                surveyPage.getBackFromDetailSurveyToMainSurvey().click();
+            }
+            i++;
+        }
+    }
+
+    @Test
+    public void addDescriptionToAnExistentContactTypeQuestion(){ //not work correctly
+        SurveyPage surveyPage = basePageNavigation();
+        int numberOfSurveys = surveyPage.getRowsTableNumber().size();
+        int i = 1;
+        boolean esta = false;
+        boolean haveDescription = false;
+        while(i < numberOfSurveys && !esta && !haveDescription){
+            surveyPage.getNameSurvey(i).click();
+            int numberOfQuestions = surveyPage.getNumberOfRowsQuestionsTable().size();
+            int j = 1;
+            while(j < numberOfQuestions && !esta && !haveDescription){
+                if(surveyPage.getTypeOfQuestionInTable(j).getText().equals("Contacto")){
+                    esta = true;
+                    surveyPage.getThreePointsQuestionButton(j).click();
+                    surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                    if(surveyPage.getDescriptionField().getText().isEmpty()){
+                        haveDescription = true;
+                        String generatedString = RandomStringUtils.random(30, true, false);
+                        surveyPage.getDescriptionField().sendKeys(generatedString);
+                        surveyPage.getSaveButton().click();
+                        surveyPage.getThreePointsQuestionButton(j).click();
+                        surveyPage.getOptionsInThreePointsDropDownQuestionTable(1).click();
+                        Assert.assertTrue(surveyPage.getDescriptionField().getText().equals(generatedString));
+                    }else{
+                        surveyPage.getCancelEditQuestionButton().click();
+                    }
+                }
+                j++;
+            }
+            if(!esta){
+                surveyPage.getBackFromDetailSurveyToMainSurvey().click();
+            }
+            i++;
+        }
+    }
+
 }
