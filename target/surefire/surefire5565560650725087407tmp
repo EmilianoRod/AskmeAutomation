@@ -1,5 +1,5 @@
 #surefire
-#Fri Nov 20 13:43:30 UYT 2020
+#Fri Nov 20 14:12:34 UYT 2020
 classPathUrl.50=/Users/emilianorodriguez/.m2/repository/io/netty/netty-transport/4.1.49.Final/netty-transport-4.1.49.Final.jar
 classPathUrl.51=/Users/emilianorodriguez/.m2/repository/io/netty/netty-resolver/4.1.49.Final/netty-resolver-4.1.49.Final.jar
 classPathUrl.52=/Users/emilianorodriguez/.m2/repository/io/opentelemetry/opentelemetry-api/0.4.0/opentelemetry-api-0.4.0.jar
