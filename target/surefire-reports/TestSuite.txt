@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 53, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1,548.451 s <<< FAILURE! - in TestSuite
+validateLoginFlow(org.example.LoginPageCases)  Time elapsed: 28.85 s  <<< FAILURE!
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //body/div[@id='root']/div[1]/div[2]/label[1] (tried for 6 second(s) with 1000 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='root']/div[1]/div[2]/label[1]"}
+  (Session info: headless chrome=86.0.4240.198)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:54420}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a7574aaac93cf07687c9b3750d9295be
+*** Element info: {Using=xpath, value=//body/div[@id='root']/div[1]/div[2]/label[1]}
+

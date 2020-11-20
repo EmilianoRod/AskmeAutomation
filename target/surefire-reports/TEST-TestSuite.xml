@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="1,548.451" tests="53" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/emilianorodriguez/Desktop/Cursoselenium/apache-maven-3.6.3/boot/plexus-classworlds-2.6.0.jar"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="user.timezone" value="America/Montevideo"/>
+    <property name="maven.conf" value="/Users/emilianorodriguez/Desktop/Cursoselenium/apache-maven-3.6.3/conf"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="UY"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="maven.home" value="/Users/emilianorodriguez/Desktop/Cursoselenium/apache-maven-3.6.3"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/emilianorodriguez"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-04-14"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-11.0.7.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.7+8-LTS"/>
+    <property name="user.name" value="emilianorodriguez"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.15.7"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="18.9"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/0m/gb7z83vd0cj1xmtytxxw2tgm0000gn/T/"/>
+    <property name="java.version" value="11.0.7"/>
+    <property name="user.dir" value="/Users/emilianorodriguez/Desktop/AskmeAutomation"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/emilianorodriguez/Desktop/AskmeAutomation"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/emilianorodriguez/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vm.version" value="11.0.7+8-LTS"/>
+    <property name="classworlds.conf" value="/Users/emilianorodriguez/Desktop/Cursoselenium/apache-maven-3.6.3/bin/m2.conf"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="library.jansi.path" value="/Users/emilianorodriguez/Desktop/Cursoselenium/apache-maven-3.6.3/lib/jansi-native"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="14.462"/>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="11.717"/>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="11.867"/>
+  <testcase name="loginWithInvalidEmail" classname="org.example.LoginPageCases" time="11.531"/>
+  <testcase name="loginWithInvalidEmailAndThenLoginWithValidEmail" classname="org.example.LoginPageCases" time="13.348"/>
+  <testcase name="loginWithInvalidPassword" classname="org.example.LoginPageCases" time="12.067"/>
+  <testcase name="loginWithoutEmailAndPassword" classname="org.example.LoginPageCases" time="5.637"/>
+  <testcase name="validateLoginFlow" classname="org.example.LoginPageCases" time="28.85">
+    <failure message="Expected condition failed: waiting for presence of element located by: By.xpath: //body/div[@id=&apos;root&apos;]/div[1]/div[2]/label[1] (tried for 6 second(s) with 1000 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: //body/div[@id='root']/div[1]/div[2]/label[1] (tried for 6 second(s) with 1000 milliseconds interval)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//body/div[@id='root']/div[1]/div[2]/label[1]"}
+  (Session info: headless chrome=86.0.4240.198)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
+System info: host: 'Emilianos-Mini.localdomain', ip: '192.168.1.37', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '11.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: /var/folders/0m/gb7z83vd0cj...}, goog:chromeOptions: {debuggerAddress: localhost:54420}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a7574aaac93cf07687c9b3750d9295be
+*** Element info: {Using=xpath, value=//body/div[@id='root']/div[1]/div[2]/label[1]}
+</failure>
+    <system-out><![CDATA[chrome headless
+13:45:03.591 [TestNG-test=TestProject-1] INFO  resources.Base - Connecting to database...
+13:45:05.162 [TestNG-test=TestProject-1] INFO  resources.Base - Connected to PostgresSQL
+13:45:06.838 [TestNG-test=TestProject-1] INFO  resources.Base - Sesión iniciada
+13:45:08.014 [TestNG-test=TestProject-1] INFO  resources.Base - sesión cerrada
+13:45:09.487 [TestNG-test=TestProject-1] INFO  resources.Base - Sesión iniciada
+13:45:10.677 [TestNG-test=TestProject-1] INFO  resources.Base - sesión cerrada
+13:45:12.221 [TestNG-test=TestProject-1] INFO  resources.Base - Sesión iniciada
+13:45:13.386 [TestNG-test=TestProject-1] INFO  resources.Base - sesión cerrada
+13:45:14.955 [TestNG-test=TestProject-1] INFO  resources.Base - Sesión iniciada
+13:45:16.145 [TestNG-test=TestProject-1] INFO  resources.Base - sesión cerrada
+13:45:22.721 [TestNG-test=TestProject-1] ERROR resources.Base - Error al iniciar sesion
+**************
+Screenshot stored at: /Users/emilianorodriguez/Desktop/AskmeAutomation/screenshots/validateLoginFlow-Fri_Nov_20_13_45_28_UYT_2020.png
+**************
+13:45:29.053 [TestNG-test=TestProject-1] INFO  resources.Base - Test failed
+]]></system-out>
+    <system-err><![CDATA[Starting ChromeDriver 86.0.4240.22 (398b0743353ff36fb1b82468f63a3a93b4e2e89e-refs/branch-heads/4240@{#378}) on port 44912
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+Nov 20, 2020 1:45:00 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="createAnAdminWithInvalidEmail" classname="org.example.AdminsTestCases" time="20.967"/>
+  <testcase name="createAnAdminWithInvalidEmail" classname="org.example.AdminsTestCases" time="22.087"/>
+  <testcase name="createAnAdminWithInvalidEmail" classname="org.example.AdminsTestCases" time="8.93"/>
+  <testcase name="createAnAdminWithInvalidEmail" classname="org.example.AdminsTestCases" time="21.721"/>
+  <testcase name="createAnAdminWithoutConfirmPassword" classname="org.example.AdminsTestCases" time="21.949"/>
+  <testcase name="createAnAdminWithoutEmail" classname="org.example.AdminsTestCases" time="22.148"/>
+  <testcase name="createCompanyAdmin" classname="org.example.AdminsTestCases" time="24.087"/>
+  <testcase name="createVisualizatorAdmin" classname="org.example.AdminsTestCases" time="24.473"/>
+  <testcase name="deleteAnCompanyAdmin" classname="org.example.AdminsTestCases" time="21.949"/>
+  <testcase name="editEmailOfCompanyUser" classname="org.example.AdminsTestCases" time="24.259"/>
+  <testcase name="editEmailOfVisualizatorUser" classname="org.example.AdminsTestCases" time="36.448"/>
+  <testcase name="myUserDontAppearsInTheList" classname="org.example.AdminsTestCases" time="34.427"/>
+  <testcase name="editMyEmail" classname="org.example.InfoUserTestCases" time="34.984"/>
+  <testcase name="editMyInfoIncorrectly" classname="org.example.InfoUserTestCases" time="33.979"/>
+  <testcase name="editMyInfoWithInvalidEmail" classname="org.example.InfoUserTestCases" time="34.188"/>
+  <testcase name="editMyInfoWithInvalidEmail" classname="org.example.InfoUserTestCases" time="34.264"/>
+  <testcase name="editMyInfoWithInvalidEmail" classname="org.example.InfoUserTestCases" time="21.183"/>
+  <testcase name="editMyInfoWithInvalidEmail" classname="org.example.InfoUserTestCases" time="34.235"/>
+  <testcase name="addAContactTypeQuestionWithSubtypeEmailWithoutDescription" classname="org.example.SurveyPageTestCases" time="26.638"/>
+  <testcase name="addAContactTypeQuestionWithSubtypeIDWithDescription" classname="org.example.SurveyPageTestCases" time="24.839"/>
+  <testcase name="addAContactTypeQuestionWithSubtypeIDWithoutDescription" classname="org.example.SurveyPageTestCases" time="26.56"/>
+  <testcase name="addAContactTypeQuestionWithSubtypeMobileNumberWithDescription" classname="org.example.SurveyPageTestCases" time="25.195"/>
+  <testcase name="addAContactTypeQuestionWithSubtypeMobileNumberWithoutDescription" classname="org.example.SurveyPageTestCases" time="24.226"/>
+  <testcase name="addATextQuestionToSurvey" classname="org.example.SurveyPageTestCases" time="24.006"/>
+  <testcase name="addAreaToSurvey" classname="org.example.SurveyPageTestCases" time="22.836"/>
+  <testcase name="addDescriptionToAnExistentContactTypeQuestion" classname="org.example.SurveyPageTestCases" time="24.035"/>
+  <testcase name="addFacesQuestionToSurveyWithSatisfactionIndex" classname="org.example.SurveyPageTestCases" time="23.996"/>
+  <testcase name="addFacesQuestionToSurveyWithSatisfactionIndexAndWithoutText" classname="org.example.SurveyPageTestCases" time="27.27"/>
+  <testcase name="addFacesQuestionToSurveyWithoutSatisfactionIndex" classname="org.example.SurveyPageTestCases" time="24.039"/>
+  <testcase name="addFacesQuestionToSurveyWithoutSatisfactionIndexAndText" classname="org.example.SurveyPageTestCases" time="28.616"/>
+  <testcase name="addMultipleOptionQuestionToSurveyWithSixOptions" classname="org.example.SurveyPageTestCases" time="29.934"/>
+  <testcase name="addMultipleOptionQuestionToSurveyWithThreeOptionsOneEmpty" classname="org.example.SurveyPageTestCases" time="25.676"/>
+  <testcase name="addMultipleOptionQuestionToSurveyWithTwoEmptyOptions" classname="org.example.SurveyPageTestCases" time="56.626"/>
+  <testcase name="addMultipleOptionQuestionToSurveyWithTwoOptions" classname="org.example.SurveyPageTestCases" time="27.34"/>
+  <testcase name="addScaleQuestionToSurvey" classname="org.example.SurveyPageTestCases" time="26.881"/>
+  <testcase name="addScaleQuestionToSurveyWithoutText" classname="org.example.SurveyPageTestCases" time="24.864"/>
+  <testcase name="assignAllTheAreasPosiblesInASurvey" classname="org.example.SurveyPageTestCases" time="94.45"/>
+  <testcase name="createASurvey" classname="org.example.SurveyPageTestCases" time="26.31"/>
+  <testcase name="createASurveyWithoutName" classname="org.example.SurveyPageTestCases" time="20.957"/>
+  <testcase name="editASurvey" classname="org.example.SurveyPageTestCases" time="30.502"/>
+  <testcase name="editDescriptionToAContactTypeQuestion" classname="org.example.SurveyPageTestCases" time="26.621"/>
+  <testcase name="editTitleQuestionContactType" classname="org.example.SurveyPageTestCases" time="27.961"/>
+  <testcase name="editTitleQuestionScaleType" classname="org.example.SurveyPageTestCases" time="26.413"/>
+  <testcase name="editTitleQuestionTextType" classname="org.example.SurveyPageTestCases" time="25.175"/>
+  <testcase name="unassingASurveyArea" classname="org.example.SurveyPageTestCases" time="24.915"/>
+</testsuite>
