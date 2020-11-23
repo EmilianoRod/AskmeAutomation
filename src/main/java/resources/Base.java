@@ -55,6 +55,8 @@ public class Base{
                 options.addArguments("headless");
             }
             driver.set(new ChromeDriver(options));
+            options.addArguments(" --no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
         } else if (browserName.equals("firefox")) {
             if (System.getProperty("os.name").contains("Windows")) {
                 System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "//src//main//java//resources//drivers//geckodriverWindows.exe");
@@ -93,6 +95,7 @@ public class Base{
     }
 
     public void connect(){
+        System.out.println(System.getProperty("os.name"));
         try {
             try {
                 log.info("Connecting to database...");
